@@ -1,0 +1,31 @@
+// FlexaCore Visibility Utilities
+
+// Visibility
+.visible { visibility: visible; }
+.invisible { visibility: hidden; }
+.collapse { visibility: collapse; }
+
+// Responsive visibility
+@media (width >= 640px) {
+  .sm-visible { visibility: visible !important; }
+  .sm-invisible { visibility: hidden !important; }
+  .sm-collapse { visibility: collapse !important; }
+}
+
+@media (width >= 768px) {
+  .md-visible { visibility: visible; }
+  .md-invisible { visibility: hidden; }
+  .md-collapse { visibility: collapse; }
+}
+
+@media (width >= 1024px) {
+  .lg-visible { visibility: visible; }
+  .lg-invisible { visibility: hidden; }
+  .lg-collapse { visibility: collapse; }
+}
+
+@media (width >= 1280px) {
+  .xl-visible { visibility: visible; }
+  .xl-invisible { visibility: hidden; }
+  .xl-collapse { visibility: collapse; }
+} 

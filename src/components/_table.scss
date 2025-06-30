@@ -1,0 +1,187 @@
+// FlexaCore Table Component
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  
+  th,
+  td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--fc-border, #e5e7eb);
+    vertical-align: top;
+  }
+  
+  th {
+    font-weight: 600;
+    color: var(--fc-gray-900, #111827);
+    background-color: var(--fc-gray-50, #f9fafb);
+    border-bottom-width: 2px;
+  }
+  
+  tbody {
+    tr {
+      transition: background-color 150ms ease-in-out;
+      
+      &:hover {
+        background-color: var(--fc-gray-50, #f9fafb);
+      }
+    }
+  }
+}
+
+// Table variants
+.table-striped {
+  tbody {
+    tr {
+      &:nth-child(odd) {
+        background-color: var(--fc-gray-50, #f9fafb);
+      }
+    }
+  }
+}
+
+.table-selectable {
+  .table-select-cell {
+    width: 1%;
+    white-space: nowrap;
+  }
+  
+  tbody {
+    tr {
+      cursor: pointer;
+      
+      &.table-row-selected {
+        background-color: var(--fc-primary-50, #eff6ff);
+      }
+    }
+  }
+}
+
+// Table bordered
+.table-bordered {
+  th,
+  td {
+    border: 1px solid var(--fc-border, #e5e7eb);
+  }
+}
+
+.table-borderless {
+  th,
+  td {
+    border: none;
+  }
+}
+
+// Table sizes
+.table-sm {
+  th,
+  td {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+}
+
+.table-lg {
+  th,
+  td {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
+
+// Table responsive
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+// Table with actions
+.table-actions {
+  .table-actions-cell {
+    width: 1%;
+    white-space: nowrap;
+    text-align: right;
+  }
+}
+
+// Table with sorting
+.table-sortable {
+  .table-sort-header {
+    cursor: pointer;
+    user-select: none;
+    
+    &:hover {
+      background-color: var(--fc-gray-100, #f3f4f6);
+    }
+  }
+  
+  .table-sort-icon {
+    margin-left: 0.25rem;
+    opacity: 0.5;
+  }
+  
+  .table-sort-asc {
+    .table-sort-icon {
+      opacity: 1;
+    }
+  }
+  
+  .table-sort-desc {
+    .table-sort-icon {
+      opacity: 1;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+// Table with loading
+.table-loading {
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgb(255 255 255 / 80%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+}
+
+// Table empty state
+.table-empty {
+  text-align: center;
+  padding: 2rem;
+  color: var(--fc-gray-500, #6b7280);
+}
+
+// Table footer
+.table-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  font-size: 0.875rem;
+  color: var(--fc-gray-600, #4b5563);
+}
+
+// Table compact
+.table-compact {
+  .table {
+    th,
+    td {
+      padding: 0.5rem;
+    }
+    
+    th {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+  }
+} 

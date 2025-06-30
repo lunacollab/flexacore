@@ -1,0 +1,128 @@
+// FlexaCore Overflow Utilities
+
+// Overflow
+.overflow-auto { overflow: auto; }
+.overflow-hidden { overflow: hidden; }
+.overflow-visible { overflow: visible; }
+.overflow-scroll { overflow: scroll; }
+.overflow-clip { overflow: clip; }
+
+// Overflow X
+.overflow-x-auto { overflow-x: auto; }
+.overflow-x-hidden { overflow-x: hidden; }
+.overflow-x-visible { overflow-x: visible; }
+.overflow-x-scroll { overflow-x: scroll; }
+.overflow-x-clip { overflow-x: clip; }
+
+// Overflow Y
+.overflow-y-auto { overflow-y: auto; }
+.overflow-y-hidden { overflow-y: hidden; }
+.overflow-y-visible { overflow-y: visible; }
+.overflow-y-scroll { overflow-y: scroll; }
+.overflow-y-clip { overflow-y: clip; }
+
+// Scrollbar utilities
+.scrollbar-auto { scrollbar-width: auto; }
+
+.scrollbar-thin {
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: var(--fc-gray-100, #f3f4f6);
+    border-radius: 3px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: var(--fc-gray-300, #d1d5db);
+    border-radius: 3px;
+    
+    &:hover {
+      background: var(--fc-gray-400, #9ca3af);
+    }
+  }
+}
+
+.scrollbar-none {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// Custom scrollbar colors
+.scrollbar-primary {
+  &::-webkit-scrollbar-thumb {
+    background: var(--fc-primary, #3b82f6);
+  }
+}
+
+.scrollbar-secondary {
+  &::-webkit-scrollbar-thumb {
+    background: var(--fc-secondary, #64748b);
+  }
+}
+
+.scrollbar-success {
+  &::-webkit-scrollbar-thumb {
+    background: var(--fc-success, #22c55e);
+  }
+}
+
+.scrollbar-warning {
+  &::-webkit-scrollbar-thumb {
+    background: var(--fc-warning, #f59e0b);
+  }
+}
+
+.scrollbar-danger {
+  &::-webkit-scrollbar-thumb {
+    background: var(--fc-danger, #ef4444);
+  }
+}
+
+// Responsive overflow
+@media (width >= 640px) {
+  .sm-overflow-auto { overflow: auto; }
+  .sm-overflow-hidden { overflow: hidden; }
+  .sm-overflow-visible { overflow: visible; }
+  .sm-overflow-scroll { overflow: scroll; }
+  .sm-overflow-x-auto { overflow-x: auto; }
+  .sm-overflow-x-hidden { overflow-x: hidden; }
+  .sm-overflow-y-auto { overflow-y: auto; }
+  .sm-overflow-y-hidden { overflow-y: hidden; }
+}
+
+@media (width >= 768px) {
+  .md-overflow-auto { overflow: auto; }
+  .md-overflow-hidden { overflow: hidden; }
+  .md-overflow-visible { overflow: visible; }
+  .md-overflow-scroll { overflow: scroll; }
+  .md-overflow-x-auto { overflow-x: auto; }
+  .md-overflow-x-hidden { overflow-x: hidden; }
+  .md-overflow-y-auto { overflow-y: auto; }
+  .md-overflow-y-hidden { overflow-y: hidden; }
+}
+
+@media (width >= 1024px) {
+  .lg-overflow-auto { overflow: auto; }
+  .lg-overflow-hidden { overflow: hidden; }
+  .lg-overflow-visible { overflow: visible; }
+  .lg-overflow-scroll { overflow: scroll; }
+  .lg-overflow-x-auto { overflow-x: auto; }
+  .lg-overflow-x-hidden { overflow-x: hidden; }
+  .lg-overflow-y-auto { overflow-y: auto; }
+  .lg-overflow-y-hidden { overflow-y: hidden; }
+}
+
+@media (width >= 1280px) {
+  .xl-overflow-auto { overflow: auto; }
+  .xl-overflow-hidden { overflow: hidden; }
+  .xl-overflow-visible { overflow: visible; }
+  .xl-overflow-scroll { overflow: scroll; }
+  .xl-overflow-x-auto { overflow-x: auto; }
+  .xl-overflow-x-hidden { overflow-x: hidden; }
+  .xl-overflow-y-auto { overflow-y: auto; }
+  .xl-overflow-y-hidden { overflow-y: hidden; }
+} 

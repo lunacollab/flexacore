@@ -1,0 +1,24 @@
+// FlexaCore Transition Utilities
+
+.transition-none { transition: none !important; }
+.transition-all { transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1) !important; }
+.transition-colors { transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms cubic-bezier(0.4, 0, 0.2, 1), border-color 150ms cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color 150ms cubic-bezier(0.4, 0, 0.2, 1), fill 150ms cubic-bezier(0.4, 0, 0.2, 1), stroke 150ms cubic-bezier(0.4, 0, 0.2, 1) !important; }
+.transition-opacity { transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1) !important; }
+.transition-shadow { transition: box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1) !important; }
+.transition-transform { transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1) !important; }
+
+// Duration
+.duration-75 { transition-duration: 75ms !important; }
+.duration-100 { transition-duration: 100ms !important; }
+.duration-150 { transition-duration: 150ms !important; }
+.duration-200 { transition-duration: 200ms !important; }
+.duration-300 { transition-duration: 300ms !important; }
+.duration-500 { transition-duration: 500ms !important; }
+.duration-700 { transition-duration: 700ms !important; }
+.duration-1000 { transition-duration: 1000ms !important; }
+
+// Easing
+.ease-linear { transition-timing-function: linear !important; }
+.ease-in { transition-timing-function: cubic-bezier(0.4, 0, 1, 1) !important; }
+.ease-out { transition-timing-function: cubic-bezier(0, 0, 0.2, 1) !important; }
+.ease-in-out { transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important; } 

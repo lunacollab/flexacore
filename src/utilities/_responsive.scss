@@ -1,0 +1,117 @@
+// FlexaCore Responsive Utilities
+// Generate responsive variants for all utilities
+
+// Small screens (640px and up)
+@media (width >= 640px) {
+  .sm-block { display: block !important; }
+  .sm-flex { display: flex !important; }
+  .sm-grid { display: grid !important; }
+  .sm-hidden { display: none !important; }
+  
+  .sm-text-center { text-align: center !important; }
+  .sm-text-left { text-align: left !important; }
+  .sm-text-right { text-align: right !important; }
+  
+  .sm-w-full { width: 100% !important; }
+  .sm-w-auto { width: auto !important; }
+  
+  .sm-p-4 { padding: 1rem !important; }
+  .sm-p-6 { padding: 1.5rem !important; }
+  .sm-p-8 { padding: 2rem !important; }
+  
+  .sm-m-4 { margin: 1rem !important; }
+  .sm-m-6 { margin: 1.5rem !important; }
+  .sm-m-8 { margin: 2rem !important; }
+}
+
+// Medium screens (768px and up)
+@media (width >= 768px) {
+  .md-block { display: block !important; }
+  .md-flex { display: flex !important; }
+  .md-grid { display: grid !important; }
+  .md-hidden { display: none !important; }
+  
+  .md-text-center { text-align: center !important; }
+  .md-text-left { text-align: left !important; }
+  .md-text-right { text-align: right !important; }
+  
+  .md-w-full { width: 100% !important; }
+  .md-w-auto { width: auto !important; }
+  
+  .md-p-4 { padding: 1rem !important; }
+  .md-p-6 { padding: 1.5rem !important; }
+  .md-p-8 { padding: 2rem !important; }
+  
+  .md-m-4 { margin: 1rem !important; }
+  .md-m-6 { margin: 1.5rem !important; }
+  .md-m-8 { margin: 2rem !important; }
+}
+
+// Large screens (1024px and up)
+@media (width >= 1024px) {
+  .lg-block { display: block !important; }
+  .lg-flex { display: flex !important; }
+  .lg-grid { display: grid !important; }
+  .lg-hidden { display: none !important; }
+  
+  .lg-text-center { text-align: center !important; }
+  .lg-text-left { text-align: left !important; }
+  .lg-text-right { text-align: right !important; }
+  
+  .lg-w-full { width: 100% !important; }
+  .lg-w-auto { width: auto !important; }
+  
+  .lg-p-4 { padding: 1rem !important; }
+  .lg-p-6 { padding: 1.5rem !important; }
+  .lg-p-8 { padding: 2rem !important; }
+  
+  .lg-m-4 { margin: 1rem !important; }
+  .lg-m-6 { margin: 1.5rem !important; }
+  .lg-m-8 { margin: 2rem !important; }
+}
+
+// Extra large screens (1280px and up)
+@media (width >= 1280px) {
+  .xl-block { display: block !important; }
+  .xl-flex { display: flex !important; }
+  .xl-grid { display: grid !important; }
+  .xl-hidden { display: none !important; }
+  
+  .xl-text-center { text-align: center !important; }
+  .xl-text-left { text-align: left !important; }
+  .xl-text-right { text-align: right !important; }
+  
+  .xl-w-full { width: 100% !important; }
+  .xl-w-auto { width: auto !important; }
+  
+  .xl-p-4 { padding: 1rem !important; }
+  .xl-p-6 { padding: 1.5rem !important; }
+  .xl-p-8 { padding: 2rem !important; }
+  
+  .xl-m-4 { margin: 1rem !important; }
+  .xl-m-6 { margin: 1.5rem !important; }
+  .xl-m-8 { margin: 2rem !important; }
+}
+
+// 2XL screens (1536px and up)
+@media (width >= 1536px) {
+  .xl-2-block { display: block !important; }
+  .xl-2-flex { display: flex !important; }
+  .xl-2-grid { display: grid !important; }
+  .xl-2-hidden { display: none !important; }
+  
+  .xl-2-text-center { text-align: center !important; }
+  .xl-2-text-left { text-align: left !important; }
+  .xl-2-text-right { text-align: right !important; }
+  
+  .xl-2-w-full { width: 100% !important; }
+  .xl-2-w-auto { width: auto !important; }
+  
+  .xl-2-p-4 { padding: 1rem !important; }
+  .xl-2-p-6 { padding: 1.5rem !important; }
+  .xl-2-p-8 { padding: 2rem !important; }
+  
+  .xl-2-m-4 { margin: 1rem !important; }
+  .xl-2-m-6 { margin: 1.5rem !important; }
+  .xl-2-m-8 { margin: 2rem !important; }
+} 

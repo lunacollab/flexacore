@@ -1,0 +1,155 @@
+// FlexaCore Shadow Utilities
+
+// Shadow utilities
+.shadow-none { box-shadow: none; }
+.shadow-sm { box-shadow: var(--fc-shadow-sm); }
+.shadow { box-shadow: var(--fc-shadow); }
+.shadow-md { box-shadow: var(--fc-shadow-md); }
+.shadow-lg { box-shadow: var(--fc-shadow-lg); }
+.shadow-xl { box-shadow: var(--fc-shadow-xl); }
+.shadow-2xl { box-shadow: var(--fc-shadow-2xl); }
+.shadow-inner { box-shadow: var(--fc-shadow-inner); }
+
+// Shadow colors
+.shadow-primary { box-shadow: 0 1px 3px 0 rgb(59 130 246 / 10%), 0 1px 2px -1px rgb(59 130 246 / 10%); }
+.shadow-secondary { box-shadow: 0 1px 3px 0 rgb(100 116 139 / 10%), 0 1px 2px -1px rgb(100 116 139 / 10%); }
+.shadow-success { box-shadow: 0 1px 3px 0 rgb(34 197 94 / 10%), 0 1px 2px -1px rgb(34 197 94 / 10%); }
+.shadow-warning { box-shadow: 0 1px 3px 0 rgb(245 158 11 / 10%), 0 1px 2px -1px rgb(245 158 11 / 10%); }
+.shadow-danger { box-shadow: 0 1px 3px 0 rgb(239 68 68 / 10%), 0 1px 2px -1px rgb(239 68 68 / 10%); }
+.shadow-info { box-shadow: 0 1px 3px 0 rgb(14 165 233 / 10%), 0 1px 2px -1px rgb(14 165 233 / 10%); }
+
+// Shadow with opacity
+.shadow-black-5 { box-shadow: 0 1px 3px 0 rgb(0 0 0 / 5%), 0 1px 2px -1px rgb(0 0 0 / 5%); }
+.shadow-black-10 { box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px -1px rgb(0 0 0 / 10%); }
+.shadow-black-20 { box-shadow: 0 1px 3px 0 rgb(0 0 0 / 20%), 0 1px 2px -1px rgb(0 0 0 / 20%); }
+.shadow-black-25 { box-shadow: 0 1px 3px 0 rgb(0 0 0 / 25%), 0 1px 2px -1px rgb(0 0 0 / 25%); }
+.shadow-black-50 { box-shadow: 0 1px 3px 0 rgb(0 0 0 / 50%), 0 1px 2px -1px rgb(0 0 0 / 50%); }
+
+// Hover shadows
+.hover-shadow-none {
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.hover-shadow-sm {
+  &:hover {
+    box-shadow: var(--fc-shadow-sm);
+  }
+}
+
+.hover-shadow {
+  &:hover {
+    box-shadow: var(--fc-shadow);
+  }
+}
+
+.hover-shadow-md {
+  &:hover {
+    box-shadow: var(--fc-shadow-md);
+  }
+}
+
+.hover-shadow-lg {
+  &:hover {
+    box-shadow: var(--fc-shadow-lg);
+  }
+}
+
+.hover-shadow-xl {
+  &:hover {
+    box-shadow: var(--fc-shadow-xl);
+  }
+}
+
+.hover-shadow-2xl {
+  &:hover {
+    box-shadow: var(--fc-shadow-2xl);
+  }
+}
+
+.hover-shadow-inner {
+  &:hover {
+    box-shadow: var(--fc-shadow-inner);
+  }
+}
+
+// Focus shadows
+.focus-shadow-none {
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.focus-shadow-sm {
+  &:focus {
+    box-shadow: var(--fc-shadow-sm);
+  }
+}
+
+.focus-shadow {
+  &:focus {
+    box-shadow: var(--fc-shadow);
+  }
+}
+
+.focus-shadow-md {
+  &:focus {
+    box-shadow: var(--fc-shadow-md);
+  }
+}
+
+.focus-shadow-lg {
+  &:focus {
+    box-shadow: var(--fc-shadow-lg);
+  }
+}
+
+.focus-shadow-xl {
+  &:focus {
+    box-shadow: var(--fc-shadow-xl);
+  }
+}
+
+.focus-shadow-2xl {
+  &:focus {
+    box-shadow: var(--fc-shadow-2xl);
+  }
+}
+
+.focus-shadow-inner {
+  &:focus {
+    box-shadow: var(--fc-shadow-inner);
+  }
+}
+
+// Dark mode shadows
+.dark {
+  .shadow-sm {
+    box-shadow: var(--fc-shadow-sm);
+  }
+  
+  .shadow {
+    box-shadow: var(--fc-shadow);
+  }
+  
+  .shadow-md {
+    box-shadow: var(--fc-shadow-md);
+  }
+  
+  .shadow-lg {
+    box-shadow: var(--fc-shadow-lg);
+  }
+  
+  .shadow-xl {
+    box-shadow: var(--fc-shadow-xl);
+  }
+  
+  .shadow-2xl {
+    box-shadow: var(--fc-shadow-2xl);
+  }
+  
+  .shadow-inner {
+    box-shadow: var(--fc-shadow-inner);
+  }
+} 

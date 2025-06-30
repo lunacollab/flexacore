@@ -1,0 +1,292 @@
+// FlexaCore Print Styles
+
+@media print {
+  // Reset print styles
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    
+    &::before,
+    &::after {
+      background: transparent !important;
+      color: #000 !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+  }
+  
+  // Hide non-essential elements
+  .no-print,
+  .print-hidden,
+  .btn,
+  .modal,
+  .dropdown,
+  .tooltip,
+  .toast,
+  .alert,
+  .badge,
+  .avatar,
+  .progress,
+  .skeleton,
+  .stepper,
+  .switch,
+  .tabs,
+  .breadcrumb,
+  .pagination {
+    display: none !important;
+  }
+  
+  // Show print-only elements
+  .print-only,
+  .print-visible {
+    display: block !important;
+  }
+  
+  // Typography for print
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+    color: #000;
+    background: #fff;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+    color: #000;
+  }
+  
+  h1 { font-size: 18pt; }
+  h2 { font-size: 16pt; }
+  h3 { font-size: 14pt; }
+  h4 { font-size: 12pt; }
+  h5 { font-size: 11pt; }
+  h6 { font-size: 10pt; }
+  
+  p, blockquote, ul, ol, dl {
+    orphans: 3;
+    widows: 3;
+  }
+  
+  // Links
+  a {
+    color: #000;
+    text-decoration: underline;
+    
+    &[href^="http"] {
+      &::after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        color: #666;
+      }
+    }
+  }
+  
+  // Images
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    page-break-inside: avoid;
+  }
+  
+  // Tables
+  table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    
+    th,
+    td {
+      border: 1px solid #000 !important;
+      padding: 0.5rem !important;
+      text-align: left !important;
+    }
+
+    th {
+      background: #f0f0f0 !important;
+      font-weight: bold !important;
+    }
+  }
+  
+  // Avoid page breaks
+  .avoid-break {
+    page-break-inside: avoid;
+  }
+  
+  .break-before {
+    page-break-before: always;
+  }
+  
+  .break-after {
+    page-break-after: always;
+  }
+  
+  // Layout adjustments
+  .container {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .grid,
+  .flex {
+    display: block !important;
+    
+    > * {
+      display: block !important;
+      width: 100% !important;
+      margin-bottom: 1rem !important;
+    }
+  }
+  
+  // Cards
+  .card {
+    border: 1px solid #000 !important;
+    background: #fff !important;
+    margin-bottom: 1rem !important;
+    page-break-inside: avoid;
+  }
+  
+  .card-header {
+    background: #f0f0f0 !important;
+    border-bottom: 1px solid #000 !important;
+    padding: 0.5rem !important;
+  }
+
+  .card-body {
+    padding: 0.5rem !important;
+  }
+  
+  // Forms
+  .form-group {
+    margin-bottom: 1rem !important;
+  }
+  
+  .form-label {
+    font-weight: bold !important;
+    display: block !important;
+    margin-bottom: 0.25rem !important;
+  }
+  
+  .input,
+  .textarea,
+  .select {
+    border: 1px solid #000 !important;
+    background: #fff !important;
+    padding: 0.25rem !important;
+    width: 100% !important;
+  }
+  
+  // Lists
+  .list-group {
+    border: 1px solid #000 !important;
+  }
+  
+  .list-group-item {
+    border-bottom: 1px solid #000 !important;
+    padding: 0.5rem !important;
+    background: #fff !important;
+  }
+  
+  // Navigation
+  nav,
+  .navbar,
+  .sidebar {
+    display: none !important;
+  }
+  
+  // Footer
+  footer {
+    margin-top: 2rem !important;
+    padding-top: 1rem !important;
+    border-top: 1px solid #000 !important;
+    font-size: 10pt !important;
+    color: #666 !important;
+  }
+  
+  // Page margins
+  @page {
+    margin: 1in;
+  }
+  
+  // First page
+  @page :first {
+    margin-top: 0.5in;
+  }
+  
+  // Left pages
+  @page :left {
+    margin-left: 1.5in;
+    margin-right: 0.5in;
+  }
+  
+  // Right pages
+  @page :right {
+    margin-left: 0.5in;
+    margin-right: 1.5in;
+  }
+  
+  // Headers and footers
+  .print-header {
+    position: running(header);
+    text-align: center;
+    font-size: 10pt;
+    color: #666;
+  }
+  
+  .print-footer {
+    position: running(footer);
+    text-align: center;
+    font-size: 10pt;
+    color: #666;
+  }
+  
+  @page {
+    @top-center {
+      content: element(header);
+    }
+
+    @bottom-center {
+      content: element(footer);
+    }
+  }
+  
+  // QR codes and barcodes
+  .qr-code,
+  .barcode {
+    display: block !important;
+    text-align: center !important;
+    margin: 1rem 0 !important;
+  }
+  
+  // Watermarks
+  .watermark {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) rotate(-45deg) !important;
+    font-size: 48pt !important;
+    color: rgb(0 0 0 / 10%) !important;
+    z-index: 1000 !important;
+    pointer-events: none !important;
+  }
+  
+  // Confidential documents
+  .confidential {
+    border: 2px solid #000 !important;
+    padding: 1rem !important;
+    margin: 1rem 0 !important;
+    background: #fff !important;
+    
+    &::before {
+      content: "CONFIDENTIAL";
+      display: block !important;
+      font-weight: bold !important;
+      text-align: center !important;
+      margin-bottom: 0.5rem !important;
+      color: #000 !important;
+    }
+  }
+} 

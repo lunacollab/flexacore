@@ -1,0 +1,166 @@
+// FlexaCore Dark Theme
+
+[data-theme="dark"],
+.dark {
+  // Color palette
+  --fc-white: #000;
+  --fc-black: #fff;
+  
+  // Gray scale (inverted)
+  --fc-gray-50: #111827;
+  --fc-gray-100: #1f2937;
+  --fc-gray-200: #374151;
+  --fc-gray-300: #4b5563;
+  --fc-gray-400: #6b7280;
+  --fc-gray-500: #9ca3af;
+  --fc-gray-600: #d1d5db;
+  --fc-gray-700: #e5e7eb;
+  --fc-gray-800: #f3f4f6;
+  --fc-gray-900: #f9fafb;
+  
+  // Primary colors (adjusted for dark mode)
+  --fc-primary-50: #1e3a8a;
+  --fc-primary-100: #1e40af;
+  --fc-primary-200: #1d4ed8;
+  --fc-primary-300: #2563eb;
+  --fc-primary-400: #3b82f6;
+  --fc-primary-500: #60a5fa;
+  --fc-primary-600: #93c5fd;
+  --fc-primary-700: #bfdbfe;
+  --fc-primary-800: #dbeafe;
+  --fc-primary-900: #eff6ff;
+  --fc-primary: var(--fc-primary-400);
+  
+  // Secondary colors (adjusted for dark mode)
+  --fc-secondary-50: #0f172a;
+  --fc-secondary-100: #1e293b;
+  --fc-secondary-200: #334155;
+  --fc-secondary-300: #475569;
+  --fc-secondary-400: #64748b;
+  --fc-secondary-500: #94a3b8;
+  --fc-secondary-600: #cbd5e1;
+  --fc-secondary-700: #e2e8f0;
+  --fc-secondary-800: #f1f5f9;
+  --fc-secondary-900: #f8fafc;
+  --fc-secondary: var(--fc-secondary-400);
+  
+  // Success colors (adjusted for dark mode)
+  --fc-success-50: #14532d;
+  --fc-success-100: #166534;
+  --fc-success-200: #15803d;
+  --fc-success-300: #16a34a;
+  --fc-success-400: #22c55e;
+  --fc-success-500: #4ade80;
+  --fc-success-600: #86efac;
+  --fc-success-700: #bbf7d0;
+  --fc-success-800: #dcfce7;
+  --fc-success-900: #f0fdf4;
+  --fc-success: var(--fc-success-400);
+  
+  // Warning colors (adjusted for dark mode)
+  --fc-warning-50: #78350f;
+  --fc-warning-100: #92400e;
+  --fc-warning-200: #b45309;
+  --fc-warning-300: #d97706;
+  --fc-warning-400: #f59e0b;
+  --fc-warning-500: #fbbf24;
+  --fc-warning-600: #fcd34d;
+  --fc-warning-700: #fde68a;
+  --fc-warning-800: #fef3c7;
+  --fc-warning-900: #fffbeb;
+  --fc-warning: var(--fc-warning-400);
+  
+  // Danger colors (adjusted for dark mode)
+  --fc-danger-50: #7f1d1d;
+  --fc-danger-100: #991b1b;
+  --fc-danger-200: #b91c1c;
+  --fc-danger-300: #dc2626;
+  --fc-danger-400: #ef4444;
+  --fc-danger-500: #f87171;
+  --fc-danger-600: #fca5a5;
+  --fc-danger-700: #fecaca;
+  --fc-danger-800: #fee2e2;
+  --fc-danger-900: #fef2f2;
+  --fc-danger: var(--fc-danger-400);
+  
+  // Info colors (adjusted for dark mode)
+  --fc-info-50: #0c4a6e;
+  --fc-info-100: #075985;
+  --fc-info-200: #0369a1;
+  --fc-info-300: #0284c7;
+  --fc-info-400: #0ea5e9;
+  --fc-info-500: #38bdf8;
+  --fc-info-600: #7dd3fc;
+  --fc-info-700: #bae6fd;
+  --fc-info-800: #e0f2fe;
+  --fc-info-900: #f0f9ff;
+  --fc-info: var(--fc-info-400);
+  
+  // Accent colors (adjusted for dark mode)
+  --fc-accent-50: #701a75;
+  --fc-accent-100: #86198f;
+  --fc-accent-200: #a21caf;
+  --fc-accent-300: #c026d3;
+  --fc-accent-400: #d946ef;
+  --fc-accent-500: #e879f9;
+  --fc-accent-600: #f0abfc;
+  --fc-accent-700: #f5d0fe;
+  --fc-accent-800: #fae8ff;
+  --fc-accent-900: #fdf4ff;
+  --fc-accent: var(--fc-accent-400);
+  
+  // Semantic colors (dark mode specific)
+  --fc-surface: var(--fc-gray-800);
+  --fc-surface-secondary: var(--fc-gray-700);
+  --fc-surface-tertiary: var(--fc-gray-600);
+  --fc-background: var(--fc-gray-900);
+  --fc-border: var(--fc-gray-600);
+  --fc-border-focus: var(--fc-primary-400);
+  --fc-text-primary: var(--fc-gray-100);
+  --fc-text-secondary: var(--fc-gray-300);
+  --fc-text-tertiary: var(--fc-gray-400);
+  --fc-text-inverse: var(--fc-gray-900);
+  --fc-text-muted: var(--fc-gray-500);
+  
+  // Shadows (adjusted for dark mode)
+  --fc-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 30%);
+  --fc-shadow: 0 1px 3px 0 rgb(0 0 0 / 40%), 0 1px 2px -1px rgb(0 0 0 / 40%);
+  --fc-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 40%), 0 2px 4px -2px rgb(0 0 0 / 40%);
+  --fc-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 40%), 0 4px 6px -4px rgb(0 0 0 / 40%);
+  --fc-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 40%), 0 8px 10px -6px rgb(0 0 0 / 40%);
+  --fc-shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 60%);
+  --fc-shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 30%);
+}
+
+// Dark mode media query support
+@media (prefers-color-scheme: dark) {
+  :root {
+    &:not([data-theme="light"]) {
+      // Apply dark theme variables when user prefers dark mode
+      // and no explicit theme is set
+      --fc-white: #000;
+      --fc-black: #fff;
+      --fc-gray-50: #111827;
+      --fc-gray-100: #1f2937;
+      --fc-gray-200: #374151;
+      --fc-gray-300: #4b5563;
+      --fc-gray-400: #6b7280;
+      --fc-gray-500: #9ca3af;
+      --fc-gray-600: #d1d5db;
+      --fc-gray-700: #e5e7eb;
+      --fc-gray-800: #f3f4f6;
+      --fc-gray-900: #f9fafb;
+      --fc-surface: var(--fc-gray-800);
+      --fc-surface-secondary: var(--fc-gray-700);
+      --fc-surface-tertiary: var(--fc-gray-600);
+      --fc-background: var(--fc-gray-900);
+      --fc-border: var(--fc-gray-600);
+      --fc-border-focus: var(--fc-primary-400);
+      --fc-text-primary: var(--fc-gray-100);
+      --fc-text-secondary: var(--fc-gray-300);
+      --fc-text-tertiary: var(--fc-gray-400);
+      --fc-text-inverse: var(--fc-gray-900);
+      --fc-text-muted: var(--fc-gray-500);
+    }
+  }
+} 

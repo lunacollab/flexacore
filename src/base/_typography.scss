@@ -1,0 +1,74 @@
+// FlexaCore Base Typography
+
+:root {
+  --fc-font-sans: system-ui, sans-serif;
+  --fc-font-mono: ui-monospace, sfmono-regular, menlo, monaco, consolas, monospace;
+}
+
+body {
+  font-family: var(--fc-font-sans);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--fc-text, #111827);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1.125rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: 0.875rem; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+a {
+  color: var(--fc-primary, #3b82f6);
+  text-decoration: underline;
+  transition: color 0.2s;
+  
+  &:hover,
+  &:focus {
+    color: var(--fc-primary-dark, #1d4ed8);
+  }
+}
+
+strong, b {
+  font-weight: 700;
+}
+
+em, i {
+  font-style: italic;
+}
+
+ul, ol {
+  padding-left: 2em;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+li {
+  margin-bottom: 0.25em;
+}
+
+code, pre {
+  font-family: var(--fc-font-mono);
+  font-size: 0.95em;
+  background: #f3f4f6;
+  border-radius: 0.25em;
+  padding: 0.2em 0.4em;
+}
+
+pre {
+  padding: 1em;
+  overflow-x: auto;
+} 

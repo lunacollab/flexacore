@@ -1,0 +1,180 @@
+// FlexaCore Button Component
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  user-select: none;
+  white-space: nowrap;
+  
+  &:focus {
+    outline: 2px solid var(--fc-primary, #3b82f6);
+    outline-offset: 2px;
+  }
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+
+// Button variants
+.btn-primary {
+  background-color: var(--fc-primary, #3b82f6);
+  color: white;
+  border-color: var(--fc-primary, #3b82f6);
+  
+  &:active {
+    &:not(:disabled) {
+      background-color: var(--fc-primary-700, #1d4ed8);
+      border-color: var(--fc-primary-700, #1d4ed8);
+    }
+  }
+  
+  &:hover {
+    &:not(:disabled) {
+      background-color: var(--fc-primary-600, #2563eb);
+      border-color: var(--fc-primary-600, #2563eb);
+    }
+  }
+}
+
+.btn-secondary {
+  background-color: var(--fc-secondary, #64748b);
+  color: white;
+  border-color: var(--fc-secondary, #64748b);
+  
+  &:hover {
+    &:not(:disabled) {
+      background-color: var(--fc-secondary-600, #475569);
+      border-color: var(--fc-secondary-600, #475569);
+    }
+  }
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--fc-primary, #3b82f6);
+  border-color: var(--fc-primary, #3b82f6);
+  
+  &:hover {
+    &:not(:disabled) {
+      background-color: var(--fc-primary, #3b82f6);
+      color: white;
+    }
+  }
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--fc-text, #111827);
+  border-color: transparent;
+  
+  &:hover {
+    &:not(:disabled) {
+      background-color: var(--fc-gray-100, #f3f4f6);
+    }
+  }
+}
+
+.btn-success {
+  background-color: var(--fc-success, #22c55e);
+  color: white;
+  border-color: var(--fc-success, #22c55e);
+  
+  &:hover {
+    &:not(:disabled) {
+      background-color: var(--fc-success-600, #16a34a);
+      border-color: var(--fc-success-600, #16a34a);
+    }
+  }
+}
+
+.btn-danger {
+  background-color: var(--fc-danger, #ef4444);
+  color: white;
+  border-color: var(--fc-danger, #ef4444);
+  
+  &:hover {
+    &:not(:disabled) {
+      background-color: var(--fc-danger-600, #dc2626);
+      border-color: var(--fc-danger-600, #dc2626);
+    }
+  }
+}
+
+// Button sizes
+.btn-sm {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.btn-lg {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.btn-xl {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+// Button states
+.btn-loading {
+  position: relative;
+  color: transparent;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid currentcolor;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Button group
+.btn-group {
+  display: inline-flex;
+  
+  .btn {
+    border-radius: 0;
+    
+    &:first-child {
+      border-top-left-radius: 0.375rem;
+      border-bottom-left-radius: 0.375rem;
+    }
+    
+    &:last-child {
+      border-top-right-radius: 0.375rem;
+      border-bottom-right-radius: 0.375rem;
+    }
+    
+    &:not(:last-child) {
+      border-right-width: 0;
+    }
+  }
+} 

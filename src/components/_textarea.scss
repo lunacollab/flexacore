@@ -1,0 +1,82 @@
+// FlexaCore Textarea Component
+
+.textarea {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--fc-text, #111827);
+  background-color: var(--fc-surface, #fff);
+  border: 1px solid var(--fc-border, #e5e7eb);
+  border-radius: 0.375rem;
+  resize: vertical;
+  min-height: 2.5rem;
+  transition: border-color 150ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  &::placeholder {
+    color: var(--fc-gray-500, #6b7280);
+  }
+  
+  &:focus {
+    outline: none;
+    border-color: var(--fc-primary, #3b82f6);
+    box-shadow: 0 0 0 3px rgb(59 130 246 / 10%);
+  }
+  
+  &:disabled {
+    background-color: var(--fc-gray-100, #f3f4f6);
+    color: var(--fc-gray-500, #6b7280);
+    cursor: not-allowed;
+  }
+  
+  &.textarea-error {
+    border-color: var(--fc-danger, #ef4444);
+    
+    &:focus {
+      border-color: var(--fc-danger, #ef4444);
+      box-shadow: 0 0 0 3px rgb(239 68 68 / 10%);
+    }
+  }
+  
+  &.textarea-success {
+    border-color: var(--fc-success, #22c55e);
+    
+    &:focus {
+      border-color: var(--fc-success, #22c55e);
+      box-shadow: 0 0 0 3px rgb(34 197 94 / 10%);
+    }
+  }
+}
+
+// Textarea sizes
+.textarea-sm {
+  padding: 0.375rem 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  min-height: 2rem;
+}
+
+.textarea-lg {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  min-height: 3rem;
+}
+
+// Textarea resize options
+.textarea-resize-none {
+  resize: none;
+}
+
+.textarea-resize-vertical {
+  resize: vertical;
+}
+
+.textarea-resize-horizontal {
+  resize: horizontal;
+}
+
+.textarea-resize-both {
+  resize: both;
+} 

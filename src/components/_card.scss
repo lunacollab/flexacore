@@ -1,0 +1,107 @@
+// FlexaCore Card Component
+
+.card {
+  background-color: var(--fc-surface, #fff);
+  border: 1px solid var(--fc-border, #e5e7eb);
+  border-radius: 0.5rem;
+  box-shadow: var(--fc-shadow, 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px -1px rgb(0 0 0 / 10%));
+  overflow: hidden;
+  transition: box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  &:hover {
+    box-shadow: var(--fc-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -2px rgb(0 0 0 / 10%));
+  }
+}
+
+.card-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--fc-border, #e5e7eb);
+  background-color: var(--fc-gray-50, #f9fafb);
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--fc-text, #111827);
+}
+
+.card-subtitle {
+  margin: 0.25rem 0 0;
+  font-size: 0.875rem;
+  color: var(--fc-gray-600, #4b5563);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-footer {
+  padding: 1.5rem;
+  border-top: 1px solid var(--fc-border, #e5e7eb);
+  background-color: var(--fc-gray-50, #f9fafb);
+}
+
+// Card variants
+.card-elevated {
+  box-shadow: var(--fc-shadow-lg, 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -4px rgb(0 0 0 / 10%));
+  
+  &:hover {
+    box-shadow: var(--fc-shadow-xl, 0 20px 25px -5px rgb(0 0 0 / 10%), 0 8px 10px -6px rgb(0 0 0 / 10%));
+  }
+}
+
+.card-bordered {
+  border-width: 2px;
+}
+
+.card-flat {
+  box-shadow: none;
+  border: 1px solid var(--fc-border, #e5e7eb);
+  
+  &:hover {
+    box-shadow: var(--fc-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 5%));
+  }
+}
+
+// Card sizes
+.card-sm {
+  .card-header,
+  .card-body,
+  .card-footer {
+    padding: 1rem;
+  }
+  
+  .card-title {
+    font-size: 1rem;
+  }
+}
+
+.card-lg {
+  .card-header,
+  .card-body,
+  .card-footer {
+    padding: 2rem;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+  }
+}
+
+// Card with image
+.card-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-image-top {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.card-image-bottom {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+} 

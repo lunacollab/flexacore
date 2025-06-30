@@ -1,0 +1,46 @@
+// FlexaCore Spacing Utilities
+// Margin and Padding (including logical properties)
+
+@use '../base/variables' as *;
+
+// Margin
+@each $key, $value in $spacing {
+  .m-#{$key} { margin: #{$value} !important; }
+  .mt-#{$key} { margin-top: #{$value} !important; }
+  .mr-#{$key} { margin-right: #{$value} !important; }
+  .mb-#{$key} { margin-bottom: #{$value} !important; }
+  .ml-#{$key} { margin-left: #{$value} !important; }
+
+  // Logical
+  .ms-#{$key} { margin-inline-start: #{$value} !important; }
+  .me-#{$key} { margin-inline-end: #{$value} !important; }
+  .mx-#{$key} {
+    margin-left: #{$value} !important;
+    margin-right: #{$value} !important;
+  }
+  .my-#{$key} {
+    margin-top: #{$value} !important;
+    margin-bottom: #{$value} !important;
+  }
+}
+
+// Padding
+@each $key, $value in $spacing {
+  .p-#{$key} { padding: #{$value} !important; }
+  .pt-#{$key} { padding-top: #{$value} !important; }
+  .pr-#{$key} { padding-right: #{$value} !important; }
+  .pb-#{$key} { padding-bottom: #{$value} !important; }
+  .pl-#{$key} { padding-left: #{$value} !important; }
+
+  // Logical
+  .ps-#{$key} { padding-inline-start: #{$value} !important; }
+  .pe-#{$key} { padding-inline-end: #{$value} !important; }
+  .px-#{$key} {
+    padding-left: #{$value} !important;
+    padding-right: #{$value} !important;
+  }
+  .py-#{$key} {
+    padding-top: #{$value} !important;
+    padding-bottom: #{$value} !important;
+  }
+} 

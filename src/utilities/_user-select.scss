@@ -1,0 +1,36 @@
+// FlexaCore User Select Utilities
+
+// User select
+.select-none { user-select: none; }
+.select-text { user-select: text; }
+.select-all { user-select: all; }
+.select-auto { user-select: auto; }
+
+// Responsive user select
+@media (width >= 640px) {
+  .sm-select-none { user-select: none !important; }
+  .sm-select-text { user-select: text !important; }
+  .sm-select-all { user-select: all !important; }
+  .sm-select-auto { user-select: auto !important; }
+}
+
+@media (width >= 768px) {
+  .md-select-none { user-select: none; }
+  .md-select-text { user-select: text; }
+  .md-select-all { user-select: all; }
+  .md-select-auto { user-select: auto; }
+}
+
+@media (width >= 1024px) {
+  .lg-select-none { user-select: none; }
+  .lg-select-text { user-select: text; }
+  .lg-select-all { user-select: all; }
+  .lg-select-auto { user-select: auto; }
+}
+
+@media (width >= 1280px) {
+  .xl-select-none { user-select: none; }
+  .xl-select-text { user-select: text; }
+  .xl-select-all { user-select: all; }
+  .xl-select-auto { user-select: auto; }
+} 

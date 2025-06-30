@@ -1,0 +1,68 @@
+// FlexaCore CSS Reset
+// Based on modern-normalize and accessibility best practices
+
+* {
+  box-sizing: border-box;
+  
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  line-height: 1.5;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--fc-bg, #fff);
+  color: var(--fc-text, #111827);
+  min-height: 100vh;
+}
+
+hr {
+  height: 0;
+  color: inherit;
+  border: none;
+  border-top: 1px solid #e5e7eb;
+}
+
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+  max-width: 100%;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button, [type="button"], [type="reset"], [type="submit"] {
+  appearance: button;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+:focus {
+  outline: 2px solid var(--fc-primary, #3b82f6);
+  outline-offset: 2px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+[disabled] {
+  cursor: not-allowed;
+  opacity: 0.6;
+} 

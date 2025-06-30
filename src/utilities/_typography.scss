@@ -1,0 +1,83 @@
+// FlexaCore Typography Utilities
+// Font size, weight, and line height utilities
+
+@use '../base/variables' as *;
+
+// Font sizes
+@each $name, $size in $font-sizes {
+  .text-#{$name} { font-size: #{$size} !important; }
+}
+
+// Font weights
+@each $name, $weight in $font-weights {
+  .font-#{$name} { font-weight: #{$weight} !important; }
+}
+
+// Line heights
+@each $name, $height in $line-heights {
+  .leading-#{$name} { line-height: #{$height} !important; }
+}
+
+// Text alignment
+.text-left { text-align: left !important; }
+.text-center { text-align: center !important; }
+.text-right { text-align: right !important; }
+.text-justify { text-align: justify !important; }
+.text-start { text-align: start !important; }
+.text-end { text-align: end !important; }
+
+// Text decoration
+.underline { text-decoration: underline !important; }
+.no-underline { text-decoration: none !important; }
+.line-through { text-decoration: line-through !important; }
+
+// Text transform
+.uppercase { text-transform: uppercase !important; }
+.lowercase { text-transform: lowercase !important; }
+.capitalize { text-transform: capitalize !important; }
+.normal-case { text-transform: none !important; }
+
+// Font style
+.italic { font-style: italic !important; }
+.not-italic { font-style: normal !important; }
+
+// Font family
+.font-sans { font-family: var(--fc-font-sans) !important; }
+.font-serif { font-family: var(--fc-font-serif) !important; }
+.font-mono { font-family: var(--fc-font-mono) !important; }
+
+// Text overflow
+.truncate {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.overflow-ellipsis { text-overflow: ellipsis !important; }
+.overflow-clip { text-overflow: clip !important; }
+
+// Whitespace
+.whitespace-normal { white-space: normal !important; }
+.whitespace-nowrap { white-space: nowrap !important; }
+.whitespace-pre { white-space: pre !important; }
+.whitespace-pre-line { white-space: pre-line !important; }
+.whitespace-pre-wrap { white-space: pre-wrap !important; }
+.whitespace-break-spaces { white-space: break-spaces !important; }
+
+// Word break
+.break-normal {
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+}
+
+.break-words { overflow-wrap: break-word !important; }
+.break-all { word-break: break-all !important; }
+.break-keep { word-break: keep-all !important; }
+
+// Letter spacing
+.tracking-tighter { letter-spacing: -0.05em !important; }
+.tracking-tight { letter-spacing: -0.025em !important; }
+.tracking-normal { letter-spacing: 0 !important; }
+.tracking-wide { letter-spacing: 0.025em !important; }
+.tracking-wider { letter-spacing: 0.05em !important; }
+.tracking-widest { letter-spacing: 0.1em !important; } 

@@ -1,0 +1,271 @@
+// FlexaCore RTL Support
+
+[dir="rtl"],
+.rtl {
+  // Text direction
+  direction: rtl;
+  text-align: right;
+  
+  // Logical properties for spacing
+  --fc-margin-start: var(--fc-margin-right, 0);
+  --fc-margin-end: var(--fc-margin-left, 0);
+  --fc-padding-start: var(--fc-padding-right, 0);
+  --fc-padding-end: var(--fc-padding-left, 0);
+  
+  // Border radius adjustments for RTL
+  --fc-border-radius-start: var(--fc-border-radius-end, 0);
+  --fc-border-radius-end: var(--fc-border-radius-start, 0);
+  
+  // Transform adjustments
+  --fc-transform-flip: scaleX(-1);
+  
+  // Icon and arrow directions
+  .icon-arrow-right {
+    &::before {
+      content: "←";
+    }
+  }
+  
+  .icon-arrow-left {
+    &::before {
+      content: "→";
+    }
+  }
+  
+  .icon-chevron-right {
+    &::before {
+      content: "‹";
+    }
+  }
+  
+  .icon-chevron-left {
+    &::before {
+      content: "›";
+    }
+  }
+  
+  // Button and input adjustments
+  .btn-group {
+    .btn {
+      &:not(:first-child) {
+        border-radius: 0 var(--fc-radius) var(--fc-radius) 0;
+      }
+    }
+  }
+  
+  // Input group adjustments
+  .input-group {
+    > .input {
+      &:not(:last-child) {
+        border-radius: var(--fc-radius) 0 0 var(--fc-radius);
+      }
+      
+      &:not(:first-child) {
+        border-radius: 0 var(--fc-radius) var(--fc-radius) 0;
+      }
+    }
+  }
+  
+  // Dropdown adjustments
+  .dropdown-menu {
+    text-align: right;
+  }
+  
+  .dropdown-item {
+    text-align: right;
+  }
+  
+  // Modal adjustments
+  .modal-header {
+    .btn-close {
+      margin: calc(-0.5 * var(--fc-spacer, 1rem)) calc(-0.5 * var(--fc-spacer, 1rem)) calc(-0.5 * var(--fc-spacer, 1rem)) auto;
+    }
+  }
+  
+  // Toast adjustments
+  .toast-container {
+    left: 1rem;
+    right: auto;
+    
+    &.toast-top-right {
+      top: 1rem;
+      left: 1rem;
+      right: auto;
+    }
+    
+    &.toast-top-left {
+      top: 1rem;
+      right: 1rem;
+      left: auto;
+    }
+    
+    &.toast-bottom-right {
+      bottom: 1rem;
+      left: 1rem;
+      right: auto;
+    }
+    
+    &.toast-bottom-left {
+      bottom: 1rem;
+      right: 1rem;
+      left: auto;
+    }
+  }
+  
+  // Tooltip adjustments
+  .tooltip {
+    &[data-popper-placement^="left"] {
+      .tooltip-arrow {
+        right: -4px;
+        left: auto;
+      }
+    }
+    
+    &[data-popper-placement^="right"] {
+      .tooltip-arrow {
+        left: -4px;
+        right: auto;
+      }
+    }
+  }
+  
+  // Progress bar adjustments
+  .progress-bar {
+    float: right;
+  }
+  
+  // Breadcrumb adjustments
+  .breadcrumb-item {
+    & + .breadcrumb-item::before {
+      content: var(--fc-breadcrumb-divider, "/");
+      float: right;
+      padding-left: 0.5rem;
+      padding-right: 0;
+    }
+  }
+  
+  // Pagination adjustments
+  .pagination {
+    .page-item {
+      &:first-child {
+        .page-link {
+          border-radius: 0 var(--fc-radius) var(--fc-radius) 0;
+        }
+      }
+      
+      &:last-child {
+        .page-link {
+          border-radius: var(--fc-radius) 0 0 var(--fc-radius);
+        }
+      }
+    }
+  }
+  
+  // Table adjustments
+  .table {
+    th,
+    td {
+      text-align: right;
+    }
+  }
+  
+  // Form adjustments
+  .form-check {
+    padding-left: 0;
+    padding-right: 1.5rem;
+  }
+  
+  .form-check-input {
+    margin-left: 0;
+    margin-right: -1.5rem;
+  }
+  
+  .form-switch {
+    padding-left: 0;
+    padding-right: 2.5rem;
+    
+    .form-check-input {
+      margin-left: 0;
+      margin-right: -2.5rem;
+    }
+  }
+  
+  // Alert adjustments
+  .alert-dismissible {
+    padding-left: 1rem;
+    padding-right: 3rem;
+    
+    .btn-close {
+      left: 0;
+      right: auto;
+    }
+  }
+  
+  // Card adjustments
+  .card-header-tabs {
+    margin-left: 0;
+    margin-right: -1rem;
+    
+    .nav-link {
+      border-top-left-radius: 0;
+      border-top-right-radius: var(--fc-radius);
+    }
+  }
+  
+  // Tabs adjustments
+  .nav-tabs {
+    .nav-link {
+      border-top-left-radius: 0;
+      border-top-right-radius: var(--fc-radius);
+    }
+  }
+  
+  // List group adjustments
+  .list-group-item {
+    &:first-child {
+      border-top-left-radius: 0;
+      border-top-right-radius: var(--fc-radius);
+    }
+    
+    &:last-child {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: var(--fc-radius);
+    }
+  }
+}
+
+// RTL utility classes
+.rtl-text-left { text-align: left !important; }
+.rtl-text-right { text-align: right !important; }
+.rtl-text-center { text-align: center !important; }
+
+.rtl-float-left { float: left !important; }
+.rtl-float-right { float: right !important; }
+
+.rtl-clear-left { clear: left !important; }
+.rtl-clear-right { clear: right !important; }
+
+// RTL responsive utilities
+@media (width >= 640px) {
+  .rtl-sm-text-left { text-align: left; }
+  .rtl-sm-text-right { text-align: right; }
+  .rtl-sm-text-center { text-align: center; }
+}
+
+@media (width >= 768px) {
+  .rtl-md-text-left { text-align: left !important; }
+  .rtl-md-text-right { text-align: right !important; }
+  .rtl-md-text-center { text-align: center !important; }
+}
+
+@media (width >= 1024px) {
+  .rtl-lg-text-left { text-align: left !important; }
+  .rtl-lg-text-right { text-align: right !important; }
+  .rtl-lg-text-center { text-align: center !important; }
+}
+
+@media (width >= 1280px) {
+  .rtl-xl-text-left { text-align: left !important; }
+  .rtl-xl-text-right { text-align: right !important; }
+  .rtl-xl-text-center { text-align: center !important; }
+} 

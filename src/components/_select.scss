@@ -1,0 +1,94 @@
+// FlexaCore Select Component
+
+.select {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 2.5rem 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--fc-text, #111827);
+  background-color: var(--fc-surface, #fff);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  border: 1px solid var(--fc-border, #e5e7eb);
+  border-radius: 0.375rem;
+  appearance: none;
+  transition: border-color 150ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  &:focus {
+    outline: none;
+    border-color: var(--fc-primary, #3b82f6);
+    box-shadow: 0 0 0 3px rgb(59 130 246 / 10%);
+  }
+  
+  &:disabled {
+    background-color: var(--fc-gray-100, #f3f4f6);
+    color: var(--fc-gray-500, #6b7280);
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  
+  &.select-error {
+    border-color: var(--fc-danger, #ef4444);
+    
+    &:focus {
+      border-color: var(--fc-danger, #ef4444);
+      box-shadow: 0 0 0 3px rgb(239 68 68 / 10%);
+    }
+  }
+  
+  &.select-success {
+    border-color: var(--fc-success, #22c55e);
+    
+    &:focus {
+      border-color: var(--fc-success, #22c55e);
+      box-shadow: 0 0 0 3px rgb(34 197 94 / 10%);
+    }
+  }
+  
+  &[multiple] {
+    padding: 0.5rem 0.75rem;
+    background-image: none;
+    
+    &.select-sm {
+      padding: 0.375rem 0.5rem;
+    }
+    
+    &.select-lg {
+      padding: 0.75rem 1rem;
+    }
+  }
+  
+  option {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--fc-text, #111827);
+    background-color: var(--fc-surface, #fff);
+    
+    &:hover {
+      background-color: var(--fc-primary-50, #eff6ff);
+    }
+    
+    &:checked {
+      background-color: var(--fc-primary, #3b82f6);
+      color: white;
+    }
+  }
+}
+
+// Select sizes
+.select-sm {
+  padding: 0.375rem 2rem 0.375rem 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  background-size: 1.25em 1.25em;
+}
+
+.select-lg {
+  padding: 0.75rem 3rem 0.75rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  background-size: 1.75em 1.75em;
+} 

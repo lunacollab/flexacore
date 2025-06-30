@@ -1,0 +1,70 @@
+// FlexaCore - A powerful, flexible CSS/UI library
+// Main entry point
+
+// Base styles
+@use 'base/variables';
+@use 'base/reset';
+@use 'base/typography' as base-typography;
+@use 'base/root';
+
+// Utilities
+@use 'utilities/spacing';
+@use 'utilities/display';
+@use 'utilities/flexbox';
+@use 'utilities/grid' as grid-utils;
+@use 'utilities/colors';
+@use 'utilities/typography' as typography-utils;
+@use 'utilities/borders';
+@use 'utilities/shadows';
+@use 'utilities/effects';
+@use 'utilities/animations';
+@use 'utilities/transitions';
+@use 'utilities/positions';
+@use 'utilities/sizing';
+@use 'utilities/overflow';
+@use 'utilities/cursor';
+@use 'utilities/pointer-events';
+@use 'utilities/user-select';
+@use 'utilities/visibility';
+@use 'utilities/z-index';
+@use 'utilities/opacity';
+
+// Components
+@use 'components/button';
+@use 'components/input';
+@use 'components/textarea';
+@use 'components/select';
+@use 'components/card';
+@use 'components/modal';
+@use 'components/tooltip';
+@use 'components/switch';
+@use 'components/tabs';
+@use 'components/dropdown';
+@use 'components/toast';
+@use 'components/progress';
+@use 'components/skeleton';
+@use 'components/stepper';
+@use 'components/badge';
+@use 'components/avatar';
+@use 'components/alert';
+@use 'components/breadcrumb';
+@use 'components/pagination';
+@use 'components/table';
+@use 'components/form';
+
+// Layout
+@use 'layout/container';
+@use 'layout/grid' as grid-layout;
+@use 'layout/columns';
+@use 'layout/masonry';
+
+// Themes
+@use 'themes/default';
+@use 'themes/dark';
+@use 'themes/rtl';
+
+// Utilities for responsive design
+@use 'utilities/responsive';
+
+// Print styles
+@use 'base/print'; 

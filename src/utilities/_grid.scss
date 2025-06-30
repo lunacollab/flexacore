@@ -1,0 +1,99 @@
+// FlexaCore Grid Utilities
+// CSS Grid layout utilities
+
+@use '../base/variables' as *;
+
+// Grid display
+.grid { display: grid !important; }
+.inline-grid { display: inline-grid !important; }
+
+// Grid template columns
+@for $i from 1 through 12 {
+  .grid-cols-#{$i} { grid-template-columns: repeat(#{$i}, minmax(0, 1fr)) !important; }
+}
+
+// Grid template rows
+@for $i from 1 through 12 {
+  .grid-rows-#{$i} { grid-template-rows: repeat(#{$i}, minmax(0, 1fr)) !important; }
+}
+
+// Grid gap
+@each $key, $value in $spacing {
+  .gap-#{$key} { gap: #{$value} !important; }
+  .gap-x-#{$key} { column-gap: #{$value} !important; }
+  .gap-y-#{$key} { row-gap: #{$value} !important; }
+}
+
+// Grid column span
+@for $i from 1 through 12 {
+  .col-span-#{$i} { grid-column: span #{$i} / span #{$i} !important; }
+}
+
+// Grid row span
+@for $i from 1 through 12 {
+  .row-span-#{$i} { grid-row: span #{$i} / span #{$i} !important; }
+}
+
+// Grid column start/end
+@for $i from 1 through 13 {
+  .col-start-#{$i} { grid-column-start: #{$i} !important; }
+  .col-end-#{$i} { grid-column-end: #{$i} !important; }
+}
+
+// Grid row start/end
+@for $i from 1 through 13 {
+  .row-start-#{$i} { grid-row-start: #{$i} !important; }
+  .row-end-#{$i} { grid-row-end: #{$i} !important; }
+}
+
+// Auto grid
+.grid-cols-auto { grid-template-columns: auto !important; }
+.grid-cols-auto-fit { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)) !important; }
+.grid-cols-auto-fill { grid-template-columns: repeat(auto-fill, minmax(0, 1fr)) !important; }
+
+// Grid flow
+.grid-flow-row { grid-auto-flow: row !important; }
+.grid-flow-col { grid-auto-flow: column !important; }
+.grid-flow-dense { grid-auto-flow: dense !important; }
+
+// Grid items
+.items-start { align-items: start !important; }
+.items-end { align-items: end !important; }
+.items-center { align-items: center !important; }
+.items-stretch { align-items: stretch !important; }
+
+// Grid content
+.content-start { align-content: start !important; }
+.content-end { align-content: end !important; }
+.content-center { align-content: center !important; }
+.content-between { align-content: space-between !important; }
+.content-around { align-content: space-around !important; }
+.content-evenly { align-content: space-evenly !important; }
+
+// Justify items
+.justify-items-start { justify-items: start !important; }
+.justify-items-end { justify-items: end !important; }
+.justify-items-center { justify-items: center !important; }
+.justify-items-stretch { justify-items: stretch !important; }
+
+// Justify content
+.justify-start { justify-content: start !important; }
+.justify-end { justify-content: end !important; }
+.justify-center { justify-content: center !important; }
+.justify-between { justify-content: space-between !important; }
+.justify-around { justify-content: space-around !important; }
+.justify-evenly { justify-content: space-evenly !important; }
+
+// Self alignment
+.self-auto { align-self: auto !important; }
+.self-start { align-self: start !important; }
+.self-end { align-self: end !important; }
+.self-center { align-self: center !important; }
+.self-stretch { align-self: stretch !important; }
+
+// Justify self
+.justify-self-auto { justify-self: auto !important; }
+.justify-self-start { justify-self: start !important; }
+.justify-self-end { justify-self: end !important; }
+.justify-self-center { justify-self: center !important; }
+.justify-self-stretch { justify-self: stretch !important; } 

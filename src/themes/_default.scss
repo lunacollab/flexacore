@@ -1,0 +1,210 @@
+// FlexaCore Default Theme (Light)
+
+:root {
+  // Color palette
+  --fc-white: #fff;
+  --fc-black: #000;
+  
+  // Gray scale
+  --fc-gray-50: #f9fafb;
+  --fc-gray-100: #f3f4f6;
+  --fc-gray-200: #e5e7eb;
+  --fc-gray-300: #d1d5db;
+  --fc-gray-400: #9ca3af;
+  --fc-gray-500: #6b7280;
+  --fc-gray-600: #4b5563;
+  --fc-gray-700: #374151;
+  --fc-gray-800: #1f2937;
+  --fc-gray-900: #111827;
+  
+  // Primary colors
+  --fc-primary-50: #eff6ff;
+  --fc-primary-100: #dbeafe;
+  --fc-primary-200: #bfdbfe;
+  --fc-primary-300: #93c5fd;
+  --fc-primary-400: #60a5fa;
+  --fc-primary-500: #3b82f6;
+  --fc-primary-600: #2563eb;
+  --fc-primary-700: #1d4ed8;
+  --fc-primary-800: #1e40af;
+  --fc-primary-900: #1e3a8a;
+  --fc-primary: var(--fc-primary-500);
+  
+  // Secondary colors
+  --fc-secondary-50: #f8fafc;
+  --fc-secondary-100: #f1f5f9;
+  --fc-secondary-200: #e2e8f0;
+  --fc-secondary-300: #cbd5e1;
+  --fc-secondary-400: #94a3b8;
+  --fc-secondary-500: #64748b;
+  --fc-secondary-600: #475569;
+  --fc-secondary-700: #334155;
+  --fc-secondary-800: #1e293b;
+  --fc-secondary-900: #0f172a;
+  --fc-secondary: var(--fc-secondary-500);
+  
+  // Success colors
+  --fc-success-50: #f0fdf4;
+  --fc-success-100: #dcfce7;
+  --fc-success-200: #bbf7d0;
+  --fc-success-300: #86efac;
+  --fc-success-400: #4ade80;
+  --fc-success-500: #22c55e;
+  --fc-success-600: #16a34a;
+  --fc-success-700: #15803d;
+  --fc-success-800: #166534;
+  --fc-success-900: #14532d;
+  --fc-success: var(--fc-success-500);
+  
+  // Warning colors
+  --fc-warning-50: #fffbeb;
+  --fc-warning-100: #fef3c7;
+  --fc-warning-200: #fde68a;
+  --fc-warning-300: #fcd34d;
+  --fc-warning-400: #fbbf24;
+  --fc-warning-500: #f59e0b;
+  --fc-warning-600: #d97706;
+  --fc-warning-700: #b45309;
+  --fc-warning-800: #92400e;
+  --fc-warning-900: #78350f;
+  --fc-warning: var(--fc-warning-500);
+  
+  // Danger colors
+  --fc-danger-50: #fef2f2;
+  --fc-danger-100: #fee2e2;
+  --fc-danger-200: #fecaca;
+  --fc-danger-300: #fca5a5;
+  --fc-danger-400: #f87171;
+  --fc-danger-500: #ef4444;
+  --fc-danger-600: #dc2626;
+  --fc-danger-700: #b91c1c;
+  --fc-danger-800: #991b1b;
+  --fc-danger-900: #7f1d1d;
+  --fc-danger: var(--fc-danger-500);
+  
+  // Info colors
+  --fc-info-50: #f0f9ff;
+  --fc-info-100: #e0f2fe;
+  --fc-info-200: #bae6fd;
+  --fc-info-300: #7dd3fc;
+  --fc-info-400: #38bdf8;
+  --fc-info-500: #0ea5e9;
+  --fc-info-600: #0284c7;
+  --fc-info-700: #0369a1;
+  --fc-info-800: #075985;
+  --fc-info-900: #0c4a6e;
+  --fc-info: var(--fc-info-500);
+  
+  // Accent colors
+  --fc-accent-50: #fdf4ff;
+  --fc-accent-100: #fae8ff;
+  --fc-accent-200: #f5d0fe;
+  --fc-accent-300: #f0abfc;
+  --fc-accent-400: #e879f9;
+  --fc-accent-500: #d946ef;
+  --fc-accent-600: #c026d3;
+  --fc-accent-700: #a21caf;
+  --fc-accent-800: #86198f;
+  --fc-accent-900: #701a75;
+  --fc-accent: var(--fc-accent-500);
+  
+  // Semantic colors
+  --fc-surface: var(--fc-white);
+  --fc-surface-secondary: var(--fc-gray-50);
+  --fc-surface-tertiary: var(--fc-gray-100);
+  --fc-background: var(--fc-white);
+  --fc-border: var(--fc-gray-200);
+  --fc-border-focus: var(--fc-primary-500);
+  --fc-text-primary: var(--fc-gray-900);
+  --fc-text-secondary: var(--fc-gray-600);
+  --fc-text-tertiary: var(--fc-gray-500);
+  --fc-text-inverse: var(--fc-white);
+  --fc-text-muted: var(--fc-gray-400);
+  
+  // Shadows
+  --fc-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 5%);
+  --fc-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px -1px rgb(0 0 0 / 10%);
+  --fc-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -2px rgb(0 0 0 / 10%);
+  --fc-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -4px rgb(0 0 0 / 10%);
+  --fc-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 10%), 0 8px 10px -6px rgb(0 0 0 / 10%);
+  --fc-shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 25%);
+  --fc-shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 5%);
+  
+  // Border radius
+  --fc-radius-none: 0;
+  --fc-radius-sm: 0.125rem;
+  --fc-radius: 0.25rem;
+  --fc-radius-md: 0.375rem;
+  --fc-radius-lg: 0.5rem;
+  --fc-radius-xl: 0.75rem;
+  --fc-radius-2xl: 1rem;
+  --fc-radius-3xl: 1.5rem;
+  --fc-radius-full: 9999px;
+  
+  // Spacing scale
+  --fc-space-0: 0;
+  --fc-space-1: 0.25rem;
+  --fc-space-2: 0.5rem;
+  --fc-space-3: 0.75rem;
+  --fc-space-4: 1rem;
+  --fc-space-5: 1.25rem;
+  --fc-space-6: 1.5rem;
+  --fc-space-8: 2rem;
+  --fc-space-10: 2.5rem;
+  --fc-space-12: 3rem;
+  --fc-space-16: 4rem;
+  --fc-space-20: 5rem;
+  --fc-space-24: 6rem;
+  --fc-space-32: 8rem;
+  
+  // Typography
+  --fc-font-sans: ui-sans-serif, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --fc-font-serif: ui-serif, georgia, cambria, "Times New Roman", times, serif;
+  --fc-font-mono: ui-monospace, sfmono-regular, "SF Mono", consolas, "Liberation Mono", menlo, monospace;
+  
+  // Font sizes
+  --fc-text-xs: 0.75rem;
+  --fc-text-sm: 0.875rem;
+  --fc-text-base: 1rem;
+  --fc-text-lg: 1.125rem;
+  --fc-text-xl: 1.25rem;
+  --fc-text-2xl: 1.5rem;
+  --fc-text-3xl: 1.875rem;
+  --fc-text-4xl: 2.25rem;
+  --fc-text-5xl: 3rem;
+  --fc-text-6xl: 3.75rem;
+  
+  // Font weights
+  --fc-font-thin: 100;
+  --fc-font-extralight: 200;
+  --fc-font-light: 300;
+  --fc-font-normal: 400;
+  --fc-font-medium: 500;
+  --fc-font-semibold: 600;
+  --fc-font-bold: 700;
+  --fc-font-extrabold: 800;
+  --fc-font-black: 900;
+  
+  // Line heights
+  --fc-leading-none: 1;
+  --fc-leading-tight: 1.25;
+  --fc-leading-snug: 1.375;
+  --fc-leading-normal: 1.5;
+  --fc-leading-relaxed: 1.625;
+  --fc-leading-loose: 2;
+  
+  // Transitions
+  --fc-transition-fast: 150ms ease-in-out;
+  --fc-transition-normal: 250ms ease-in-out;
+  --fc-transition-slow: 350ms ease-in-out;
+  
+  // Z-index scale
+  --fc-z-dropdown: 1000;
+  --fc-z-sticky: 1020;
+  --fc-z-fixed: 1030;
+  --fc-z-modal-backdrop: 1040;
+  --fc-z-modal: 1050;
+  --fc-z-popover: 1060;
+  --fc-z-tooltip: 1070;
+  --fc-z-toast: 1080;
+} 

@@ -1,0 +1,57 @@
+// FlexaCore Color Utilities
+// Background and text color utilities
+
+@use '../base/variables' as *;
+
+// Background colors
+@each $name, $shades in $colors {
+  @each $shade, $value in $shades {
+    .bg-#{$name}-#{$shade} { background-color: #{$value} !important; }
+  }
+}
+
+// Text colors
+@each $name, $shades in $colors {
+  @each $shade, $value in $shades {
+    .text-#{$name}-#{$shade} { color: #{$value} !important; }
+  }
+}
+
+// Border colors
+@each $name, $shades in $colors {
+  @each $shade, $value in $shades {
+    .border-#{$name}-#{$shade} { border-color: #{$value} !important; }
+  }
+}
+
+// Semantic color shortcuts
+.bg-primary { background-color: var(--fc-primary) !important; }
+.bg-secondary { background-color: var(--fc-secondary) !important; }
+.bg-success { background-color: var(--fc-success) !important; }
+.bg-warning { background-color: var(--fc-warning) !important; }
+.bg-danger { background-color: var(--fc-danger) !important; }
+.bg-info { background-color: var(--fc-info) !important; }
+
+.text-primary { color: var(--fc-primary) !important; }
+.text-secondary { color: var(--fc-secondary) !important; }
+.text-success { color: var(--fc-success) !important; }
+.text-warning { color: var(--fc-warning) !important; }
+.text-danger { color: var(--fc-danger) !important; }
+.text-info { color: var(--fc-info) !important; }
+
+.border-primary { border-color: var(--fc-primary) !important; }
+.border-secondary { border-color: var(--fc-secondary) !important; }
+.border-success { border-color: var(--fc-success) !important; }
+.border-warning { border-color: var(--fc-warning) !important; }
+.border-danger { border-color: var(--fc-danger) !important; }
+.border-info { border-color: var(--fc-info) !important; }
+
+// Transparent colors
+.bg-transparent { background-color: transparent !important; }
+.text-transparent { color: transparent !important; }
+.border-transparent { border-color: transparent !important; }
+
+// Current color
+.bg-current { background-color: currentcolor !important; }
+.text-current { color: currentcolor !important; }
+.border-current { border-color: currentcolor !important; } 

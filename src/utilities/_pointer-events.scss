@@ -1,0 +1,39 @@
+// FlexaCore Pointer Events Utilities
+
+// Pointer events
+.pointer-events-none { pointer-events: none; }
+.pointer-events-auto { pointer-events: auto; }
+.pointer-events-all { pointer-events: all; }
+.pointer-events-fill { pointer-events: fill; }
+.pointer-events-stroke { pointer-events: stroke; }
+.pointer-events-painted { pointer-events: painted; }
+.pointer-events-visible { pointer-events: visible; }
+.pointer-events-visible-fill { pointer-events: visiblefill !important; }
+.pointer-events-visible-stroke { pointer-events: visiblestroke !important; }
+.pointer-events-visible-painted { pointer-events: visiblepainted !important; }
+.pointer-events-bounding-box { pointer-events: bounding-box; }
+
+// Responsive pointer events
+@media (width >= 640px) {
+  .sm-pointer-events-none { pointer-events: none; }
+  .sm-pointer-events-auto { pointer-events: auto; }
+  .sm-pointer-events-all { pointer-events: all; }
+}
+
+@media (width >= 768px) {
+  .md-pointer-events-none { pointer-events: none; }
+  .md-pointer-events-auto { pointer-events: auto; }
+  .md-pointer-events-all { pointer-events: all; }
+}
+
+@media (width >= 1024px) {
+  .lg-pointer-events-none { pointer-events: none; }
+  .lg-pointer-events-auto { pointer-events: auto; }
+  .lg-pointer-events-all { pointer-events: all; }
+}
+
+@media (width >= 1280px) {
+  .xl-pointer-events-none { pointer-events: none; }
+  .xl-pointer-events-auto { pointer-events: auto; }
+  .xl-pointer-events-all { pointer-events: all; }
+} 
