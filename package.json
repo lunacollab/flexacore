@@ -6,6 +6,18 @@
   "style": "dist/flexacore.css",
   "unpkg": "dist/flexacore.min.css",
   "jsdelivr": "dist/flexacore.min.css",
+  "exports": {
+    ".": {
+      "import": "./dist/flexacore.css",
+      "require": "./dist/flexacore.css",
+      "style": "./dist/flexacore.css"
+    },
+    "./dist/flexacore.css": "./dist/flexacore.css",
+    "./dist/flexacore.min.css": "./dist/flexacore.min.css",
+    "./themes/*": "./dist/themes/*",
+    "./utilities/*": "./src/utilities/*",
+    "./components/*": "./src/components/*"
+  },
   "files": [
     "dist/",
     "src/",
@@ -60,11 +72,9 @@
   ],
   "author": {
     "name": "FlexaCore Team",
-    "email": "team@flexacore.dev",
-    "url": "https://flexacore.dev"
+    "email": "team@flexacore.dev"
   },
   "license": "MIT",
-  "homepage": "https://flexacore.dev",
   "repository": {
     "type": "git",
     "url": "https://github.com/lunacollab/flexacore.git"

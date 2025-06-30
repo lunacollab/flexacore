@@ -1,6 +1,6 @@
 # FlexaCore 🚀
 
-**Thư viện CSS/UI hiện đại nhất** - Kết hợp sức mạnh của Tailwind CSS và vẻ đẹp của ShadCN UI.
+**The most modern CSS/UI library** - Combining the power of Tailwind CSS with the beauty of ShadCN UI.
 
 [![npm version](https://badge.fury.io/js/flexacore.svg)](https://badge.fury.io/js/flexacore)
 [![npm downloads](https://img.shields.io/npm/dm/flexacore.svg)](https://www.npmjs.com/package/flexacore)
@@ -9,19 +9,19 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/lunacollab/flexacore)
 
-## ✨ Tính năng nổi bật
+## ✨ Key Features
 
-- 🎨 **200+ Utility Classes** - Mạnh mẽ như Tailwind CSS
-- 🧩 **20+ Components** - Đẹp sẵn sàng sử dụng
-- 🌙 **Dark Mode** - Tự động và manual toggle
-- 🌍 **RTL Support** - Hỗ trợ đa ngôn ngữ
+- 🎨 **200+ Utility Classes** - Powerful like Tailwind CSS
+- 🧩 **20+ Components** - Beautiful and ready to use
+- 🌙 **Dark Mode** - Automatic and manual toggle
+- 🌍 **RTL Support** - Multi-language support
 - 📱 **Responsive** - Mobile-first design
 - ♿ **Accessibility** - WCAG 2.1 compliant
-- 🖨️ **Print Styles** - Tối ưu cho in ấn
+- 🖨️ **Print Styles** - Optimized for printing
 - ⚡ **Zero Config** - Plug-and-play
-- 🎭 **Theming** - CSS Variables dễ tùy chỉnh
+- 🎭 **Theming** - Easy customization with CSS Variables
 
-## 🚀 Cài đặt
+## 🚀 Installation
 
 ### NPM
 ```bash
@@ -46,14 +46,14 @@ yarn add flexacore
 ```
 
 ### Download
-Tải trực tiếp từ [Releases](https://github.com/lunacollab/flexacore/releases)
+Download directly from [Releases](https://github.com/lunacollab/flexacore/releases)
 
-## 📖 Sử dụng
+## 📖 Usage
 
 ### Basic Setup
 ```html
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,7 +69,7 @@ Tải trực tiếp từ [Releases](https://github.com/lunacollab/flexacore/rele
 </html>
 ```
 
-### Import trong JavaScript/TypeScript
+### Import in JavaScript/TypeScript
 ```javascript
 // ES6 Modules
 import 'flexacore/dist/flexacore.css';
@@ -80,10 +80,10 @@ require('flexacore/dist/flexacore.css');
 
 ### SCSS Import
 ```scss
-// Import toàn bộ
+// Import everything
 @use 'flexacore';
 
-// Import từng phần
+// Import specific parts
 @use 'flexacore/utilities';
 @use 'flexacore/components';
 @use 'flexacore/themes';
@@ -147,8 +147,8 @@ require('flexacore/dist/flexacore.css');
     <label class="form-label">Country</label>
     <select class="select">
         <option>Select country</option>
-        <option>Vietnam</option>
-        <option>USA</option>
+        <option>United States</option>
+        <option>United Kingdom</option>
     </select>
 </div>
 ```
@@ -305,22 +305,22 @@ require('flexacore/dist/flexacore.css');
 
 ## ♿ Accessibility
 
-FlexaCore được thiết kế với accessibility trong tâm trí:
+FlexaCore is designed with accessibility in mind:
 
-- ✅ **Keyboard Navigation** - Tất cả components hỗ trợ keyboard
-- ✅ **Screen Readers** - ARIA labels và semantic HTML
+- ✅ **Keyboard Navigation** - All components support keyboard
+- ✅ **Screen Readers** - ARIA labels and semantic HTML
 - ✅ **Color Contrast** - WCAG 2.1 AA compliant
 - ✅ **Focus Management** - Visible focus indicators
 - ✅ **Reduced Motion** - Respects `prefers-reduced-motion`
 
 ## 🖨️ Print Styles
 
-FlexaCore bao gồm print styles tối ưu:
+FlexaCore includes optimized print styles:
 
 ```html
-<div class="print-only">Chỉ hiển thị khi in</div>
-<div class="no-print">Không hiển thị khi in</div>
-<div class="avoid-break">Tránh ngắt trang</div>
+<div class="print-only">Only visible when printing</div>
+<div class="no-print">Hidden when printing</div>
+<div class="avoid-break">Avoid page breaks</div>
 ```
 
 ## 🚀 Build & Development
@@ -363,7 +363,7 @@ npm run build:utilities
 
 ## 🤝 Contributing
 
-Chúng tôi hoan nghênh mọi đóng góp! Vui lòng đọc [Contributing Guide](CONTRIBUTING.md) để biết thêm chi tiết.
+We welcome all contributions! Please read the [Contributing Guide](CONTRIBUTING.md) for details.
 
 ### Development Setup
 ```bash
@@ -374,21 +374,20 @@ npm test
 
 ## 📄 License
 
-MIT License - xem [LICENSE](LICENSE) để biết thêm chi tiết.
+MIT License - see [LICENSE](LICENSE) for details.
 
 ## 🙏 Acknowledgments
 
-- [Tailwind CSS](https://tailwindcss.com/) - Inspiration cho utility classes
-- [ShadCN UI](https://ui.shadcn.com/) - Inspiration cho component design
+- [Tailwind CSS](https://tailwindcss.com/) - Inspiration for utility classes
+- [ShadCN UI](https://ui.shadcn.com/) - Inspiration for component design
 - [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) - Modern CSS theming
 
 ## 📞 Support
 
 - 📧 Email: support@flexacore.dev
-- 💬 Discord: [FlexaCore Community](https://discord.gg/flexacore)
 - 🐛 Issues: [GitHub Issues](https://github.com/flexacore/flexacore/issues)
-- 📖 Docs: [Documentation](https://docs.flexacore.dev)
+- 📖 Docs: [Documentation](https://docs.flexacore.dev) (Have sooner ....)
 
 ---
 
-**FlexaCore** - Xây dựng UI hiện đại, nhanh chóng và đẹp mắt! 🎨✨ 
+**FlexaCore** - Building modern, fast, and beautiful UIs! 🎨✨ 
