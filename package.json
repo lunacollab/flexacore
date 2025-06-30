@@ -1,6 +1,6 @@
 {
   "name": "flexacore-ui",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Advanced CSS/UI library combining utility-first CSS, prebuilt components, theming, and modern design system",
   "main": "dist/flexacore.css",
   "style": "dist/flexacore.css",
