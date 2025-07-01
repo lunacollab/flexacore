@@ -1,0 +1,485 @@
+/**
+ * FlexaCore High Contrast Theme
+ * Optimized for accessibility and high contrast displays
+ */
+
+// High Contrast Theme Variables
+:root {
+  // Colors - High contrast for accessibility
+  --fc-primary: #000000;
+  --fc-secondary: #333333;
+  --fc-success: #006600;
+  --fc-danger: #cc0000;
+  --fc-warning: #cc6600;
+  --fc-info: #0066cc;
+  --fc-light: #ffffff;
+  --fc-dark: #000000;
+  
+  // Background colors
+  --fc-background: #ffffff;
+  --fc-surface: #ffffff;
+  --fc-surface-secondary: #f0f0f0;
+  
+  // Text colors
+  --fc-text: #000000;
+  --fc-text-secondary: #333333;
+  --fc-text-muted: #666666;
+  --fc-text-inverse: #ffffff;
+  
+  // Border colors
+  --fc-border: #000000;
+  --fc-border-light: #333333;
+  --fc-border-focus: #0066cc;
+  
+  // Shadow - High contrast shadows
+  --fc-shadow-small: 2px 2px 0 rgba(0, 0, 0, 0.5);
+  --fc-shadow-base: 4px 4px 0 rgba(0, 0, 0, 0.5);
+  --fc-shadow-large: 6px 6px 0 rgba(0, 0, 0, 0.5);
+  --fc-shadow-inner: inset 2px 2px 0 rgba(0, 0, 0, 0.5);
+  
+  // Typography - Larger fonts for better readability
+  --fc-font-family-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --fc-font-family-serif: Georgia, 'Times New Roman', serif;
+  --fc-font-family-mono: 'SFMono-Regular', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  
+  --fc-font-size-xs: 0.875rem;
+  --fc-font-size-sm: 1rem;
+  --fc-font-size-base: 1.125rem;
+  --fc-font-size-lg: 1.25rem;
+  --fc-font-size-xl: 1.5rem;
+  --fc-font-size-2xl: 1.875rem;
+  --fc-font-size-3xl: 2.25rem;
+  --fc-font-size-4xl: 3rem;
+  
+  --fc-line-height-tight: 1.25;
+  --fc-line-height-normal: 1.5;
+  --fc-line-height-relaxed: 1.75;
+  
+  --fc-font-weight-light: 300;
+  --fc-font-weight-normal: 400;
+  --fc-font-weight-medium: 500;
+  --fc-font-weight-semibold: 600;
+  --fc-font-weight-bold: 700;
+  --fc-font-weight-extrabold: 800;
+  
+  // Spacing - Larger spacing for better touch targets
+  --fc-spacing-xs: 0.5rem;
+  --fc-spacing-sm: 0.75rem;
+  --fc-spacing-md: 1.25rem;
+  --fc-spacing-lg: 2rem;
+  --fc-spacing-xl: 3rem;
+  --fc-spacing-2xl: 4rem;
+  
+  // Border radius - Sharp corners for high contrast
+  --fc-radius-none: 0;
+  --fc-radius-sm: 0;
+  --fc-radius-base: 0;
+  --fc-radius-md: 0;
+  --fc-radius-lg: 0;
+  --fc-radius-xl: 0;
+  --fc-radius-2xl: 0;
+  --fc-radius-full: 0;
+  
+  // Focus styles - High contrast focus indicators
+  --fc-focus-ring: 3px solid #0066cc;
+  --fc-focus-ring-offset: 2px;
+  
+  // Animation - Reduced motion for accessibility
+  --fc-transition-fast: 0.1s ease;
+  --fc-transition-base: 0.2s ease;
+  --fc-transition-slow: 0.3s ease;
+}
+
+// High Contrast Theme Class
+.theme-high-contrast {
+  // Override all color variables
+  --fc-primary: #000000;
+  --fc-secondary: #333333;
+  --fc-success: #006600;
+  --fc-danger: #cc0000;
+  --fc-warning: #cc6600;
+  --fc-info: #0066cc;
+  --fc-light: #ffffff;
+  --fc-dark: #000000;
+  
+  // Background colors
+  --fc-background: #ffffff;
+  --fc-surface: #ffffff;
+  --fc-surface-secondary: #f0f0f0;
+  
+  // Text colors
+  --fc-text: #000000;
+  --fc-text-secondary: #333333;
+  --fc-text-muted: #666666;
+  --fc-text-inverse: #ffffff;
+  
+  // Border colors
+  --fc-border: #000000;
+  --fc-border-light: #333333;
+  --fc-border-focus: #0066cc;
+  
+  // Shadows
+  --fc-shadow-small: 2px 2px 0 rgba(0, 0, 0, 0.5);
+  --fc-shadow-base: 4px 4px 0 rgba(0, 0, 0, 0.5);
+  --fc-shadow-large: 6px 6px 0 rgba(0, 0, 0, 0.5);
+  --fc-shadow-inner: inset 2px 2px 0 rgba(0, 0, 0, 0.5);
+  
+  // Typography
+  --fc-font-size-xs: 0.875rem;
+  --fc-font-size-sm: 1rem;
+  --fc-font-size-base: 1.125rem;
+  --fc-font-size-lg: 1.25rem;
+  --fc-font-size-xl: 1.5rem;
+  --fc-font-size-2xl: 1.875rem;
+  --fc-font-size-3xl: 2.25rem;
+  --fc-font-size-4xl: 3rem;
+  
+  // Spacing
+  --fc-spacing-xs: 0.5rem;
+  --fc-spacing-sm: 0.75rem;
+  --fc-spacing-md: 1.25rem;
+  --fc-spacing-lg: 2rem;
+  --fc-spacing-xl: 3rem;
+  --fc-spacing-2xl: 4rem;
+  
+  // Border radius
+  --fc-radius-none: 0;
+  --fc-radius-sm: 0;
+  --fc-radius-base: 0;
+  --fc-radius-md: 0;
+  --fc-radius-lg: 0;
+  --fc-radius-xl: 0;
+  --fc-radius-2xl: 0;
+  --fc-radius-full: 0;
+  
+  // Focus styles
+  --fc-focus-ring: 3px solid #0066cc;
+  --fc-focus-ring-offset: 2px;
+  
+  // High contrast specific styles
+  * {
+    border-color: var(--fc-border) !important;
+  }
+  
+  // Ensure all text has sufficient contrast
+  body {
+    color: var(--fc-text);
+    background-color: var(--fc-background);
+    font-size: var(--fc-font-size-base);
+    line-height: var(--fc-line-height-normal);
+  }
+  
+  // High contrast buttons
+  .fc-btn {
+    border: 2px solid var(--fc-border);
+    font-weight: var(--fc-font-weight-bold);
+    text-decoration: underline;
+    
+    &:focus {
+      outline: var(--fc-focus-ring);
+      outline-offset: var(--fc-focus-ring-offset);
+    }
+  }
+  
+  // High contrast inputs
+  .fc-input,
+  .fc-textarea,
+  .fc-select {
+    border: 2px solid var(--fc-border);
+    background-color: var(--fc-surface);
+    color: var(--fc-text);
+    
+    &:focus {
+      outline: var(--fc-focus-ring);
+      outline-offset: var(--fc-focus-ring-offset);
+      border-color: var(--fc-border-focus);
+    }
+  }
+  
+  // High contrast cards
+  .fc-card {
+    border: 2px solid var(--fc-border);
+    background-color: var(--fc-surface);
+    box-shadow: var(--fc-shadow-base);
+  }
+  
+  // High contrast modals
+  .fc-modal {
+    background-color: rgba(0, 0, 0, 0.8);
+    
+    .fc-modal-content {
+      border: 3px solid var(--fc-border);
+      background-color: var(--fc-surface);
+    }
+  }
+  
+  // High contrast alerts
+  .fc-alert {
+    border: 2px solid var(--fc-border);
+    background-color: var(--fc-surface);
+    
+    &.fc-alert-success {
+      border-color: var(--fc-success);
+    }
+    
+    &.fc-alert-danger {
+      border-color: var(--fc-danger);
+    }
+    
+    &.fc-alert-warning {
+      border-color: var(--fc-warning);
+    }
+    
+    &.fc-alert-info {
+      border-color: var(--fc-info);
+    }
+  }
+  
+  // High contrast badges
+  .fc-badge {
+    border: 1px solid var(--fc-border);
+    font-weight: var(--fc-font-weight-bold);
+  }
+  
+  // High contrast tabs
+  .fc-tab {
+    border: 2px solid var(--fc-border);
+    background-color: var(--fc-surface);
+    
+    &.fc-tab-active {
+      background-color: var(--fc-primary);
+      color: var(--fc-text-inverse);
+      border-color: var(--fc-primary);
+    }
+  }
+  
+  // High contrast switches
+  .fc-switch {
+    border: 2px solid var(--fc-border);
+    
+    &.fc-switch-active {
+      background-color: var(--fc-primary);
+      border-color: var(--fc-primary);
+    }
+  }
+  
+  // High contrast progress bars
+  .fc-progress {
+    border: 2px solid var(--fc-border);
+    background-color: var(--fc-surface);
+    
+    .fc-progress-bar {
+      background-color: var(--fc-primary);
+      border: 1px solid var(--fc-border);
+    }
+  }
+  
+  // High contrast tooltips
+  .fc-tooltip {
+    border: 2px solid var(--fc-border);
+    background-color: var(--fc-surface);
+    color: var(--fc-text);
+    box-shadow: var(--fc-shadow-base);
+  }
+  
+  // High contrast toasts
+  .fc-toast {
+    border: 2px solid var(--fc-border);
+    background-color: var(--fc-surface);
+    color: var(--fc-text);
+    box-shadow: var(--fc-shadow-base);
+  }
+  
+  // High contrast tables
+  .fc-table {
+    border: 2px solid var(--fc-border);
+    
+    th,
+    td {
+      border: 1px solid var(--fc-border);
+      padding: var(--fc-spacing-sm);
+    }
+    
+    th {
+      background-color: var(--fc-surface-secondary);
+      font-weight: var(--fc-font-weight-bold);
+    }
+  }
+  
+  // High contrast forms
+  .fc-form-group {
+    label {
+      font-weight: var(--fc-font-weight-bold);
+      color: var(--fc-text);
+    }
+  }
+  
+  // High contrast navigation
+  .fc-nav {
+    border: 2px solid var(--fc-border);
+    background-color: var(--fc-surface);
+    
+    .fc-nav-link {
+      border: 1px solid transparent;
+      
+      &:hover,
+      &:focus {
+        border-color: var(--fc-border);
+        background-color: var(--fc-surface-secondary);
+      }
+      
+      &.fc-nav-active {
+        background-color: var(--fc-primary);
+        color: var(--fc-text-inverse);
+        border-color: var(--fc-primary);
+      }
+    }
+  }
+  
+  // High contrast breadcrumbs
+  .fc-breadcrumb {
+    .fc-breadcrumb-item {
+      color: var(--fc-text);
+      
+      &:not(:last-child)::after {
+        content: '>';
+        color: var(--fc-text);
+        margin: 0 var(--fc-spacing-xs);
+      }
+    }
+  }
+  
+  // High contrast pagination
+  .fc-pagination {
+    .fc-page-link {
+      border: 2px solid var(--fc-border);
+      background-color: var(--fc-surface);
+      color: var(--fc-text);
+      
+      &:hover,
+      &:focus {
+        background-color: var(--fc-surface-secondary);
+      }
+      
+      &.fc-page-active {
+        background-color: var(--fc-primary);
+        color: var(--fc-text-inverse);
+        border-color: var(--fc-primary);
+      }
+    }
+  }
+  
+  // High contrast dropdowns
+  .fc-dropdown-menu {
+    border: 2px solid var(--fc-border);
+    background-color: var(--fc-surface);
+    box-shadow: var(--fc-shadow-base);
+    
+    .fc-dropdown-item {
+      border: 1px solid transparent;
+      
+      &:hover,
+      &:focus {
+        border-color: var(--fc-border);
+        background-color: var(--fc-surface-secondary);
+      }
+    }
+  }
+  
+  // High contrast skeleton
+  .fc-skeleton {
+    background-color: var(--fc-surface-secondary);
+    border: 1px solid var(--fc-border);
+  }
+  
+  // High contrast stepper
+  .fc-stepper {
+    .fc-step {
+      border: 2px solid var(--fc-border);
+      background-color: var(--fc-surface);
+      
+      &.fc-step-active {
+        background-color: var(--fc-primary);
+        color: var(--fc-text-inverse);
+        border-color: var(--fc-primary);
+      }
+    }
+  }
+  
+  // High contrast avatar
+  .fc-avatar {
+    border: 2px solid var(--fc-border);
+  }
+  
+  // High contrast skeleton
+  .fc-skeleton {
+    background: linear-gradient(
+      90deg,
+      var(--fc-surface-secondary) 25%,
+      var(--fc-surface) 50%,
+      var(--fc-surface-secondary) 75%
+    );
+    border: 1px solid var(--fc-border);
+  }
+  
+  // High contrast focus styles for all interactive elements
+  a:focus,
+  button:focus,
+  input:focus,
+  textarea:focus,
+  select:focus,
+  [tabindex]:focus {
+    outline: var(--fc-focus-ring);
+    outline-offset: var(--fc-focus-ring-offset);
+  }
+  
+  // High contrast selection
+  ::selection {
+    background-color: var(--fc-primary);
+    color: var(--fc-text-inverse);
+  }
+  
+  ::-moz-selection {
+    background-color: var(--fc-primary);
+    color: var(--fc-text-inverse);
+  }
+  
+  // High contrast scrollbars
+  ::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: var(--fc-surface);
+    border: 1px solid var(--fc-border);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--fc-primary);
+    border: 1px solid var(--fc-border);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--fc-secondary);
+  }
+}
+
+// Media query for reduced motion
+@media (prefers-reduced-motion: reduce) {
+  .theme-high-contrast * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+// Media query for high contrast mode
+@media (prefers-contrast: high) {
+  .theme-high-contrast {
+    // Additional high contrast adjustments
+    --fc-border: #000000;
+    --fc-text: #000000;
+    --fc-background: #ffffff;
+  }
+} 

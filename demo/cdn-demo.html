@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexaCore Framework CDN Demo</title>
+    
+    <!-- FlexaCore CDN CSS -->
+    <link rel="stylesheet" href="../dist/flexacore.min.css">
+    
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: var(--fc-background, #f8f9fa);
+            color: var(--fc-text, #212529);
+        }
+        
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .demo-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: var(--fc-surface, #ffffff);
+            border-radius: var(--fc-radius-base, 8px);
+            box-shadow: var(--fc-shadow-base, 0 2px 4px rgba(0,0,0,0.1));
+        }
+        
+        .demo-section h2 {
+            color: var(--fc-primary, #007bff);
+            border-bottom: 2px solid var(--fc-primary, #007bff);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .demo-item {
+            padding: 15px;
+            border: 1px solid var(--fc-border, #dee2e6);
+            border-radius: var(--fc-radius-base, 8px);
+            background: var(--fc-surface, #ffffff);
+        }
+        
+        .theme-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: var(--fc-surface, #ffffff);
+            padding: 10px;
+            border-radius: var(--fc-radius-base, 8px);
+            box-shadow: var(--fc-shadow-base, 0 2px 4px rgba(0,0,0,0.1));
+        }
+        
+        .theme-switcher button {
+            margin: 0 5px;
+            padding: 5px 10px;
+            border: 1px solid var(--fc-border, #dee2e6);
+            border-radius: var(--fc-radius-small, 4px);
+            background: var(--fc-surface, #ffffff);
+            color: var(--fc-text, #212529);
+            cursor: pointer;
+        }
+        
+        .theme-switcher button:hover {
+            background: var(--fc-primary, #007bff);
+            color: white;
+        }
+        
+        .code-block {
+            background: var(--fc-dark, #343a40);
+            color: var(--fc-light, #f8f9fa);
+            padding: 15px;
+            border-radius: var(--fc-radius-base, 8px);
+            font-family: 'SFMono-Regular', Monaco, Consolas, monospace;
+            font-size: 14px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button onclick="FC.theme.apply('default')">Default</button>
+        <button onclick="FC.theme.apply('light')">Light</button>
+        <button onclick="FC.theme.apply('dark')">Dark</button>
+        <button onclick="FC.theme.apply('high-contrast')">High Contrast</button>
+        <button onclick="FC.theme.toggle()">Toggle</button>
+    </div>
+
+    <div class="demo-container">
+        <h1>FlexaCore Framework CDN Demo</h1>
+        <p>Đây là demo của FlexaCore Framework - một framework UI hoàn chỉnh với hỗ trợ CDN.</p>
+
+        <!-- Buttons Demo -->
+        <div class="demo-section">
+            <h2>Buttons</h2>
+            <div class="demo-grid">
+                <div class="demo-item">
+                    <h3>Basic Buttons</h3>
+                    <button class="fc-btn fc-btn-primary">Primary Button</button>
+                    <button class="fc-btn fc-btn-secondary">Secondary Button</button>
+                    <button class="fc-btn fc-btn-success">Success Button</button>
+                    <button class="fc-btn fc-btn-danger">Danger Button</button>
+                    <button class="fc-btn fc-btn-warning">Warning Button</button>
+                    <button class="fc-btn fc-btn-info">Info Button</button>
+                </div>
+                
+                <div class="demo-item">
+                    <h3>Button Sizes</h3>
+                    <button class="fc-btn fc-btn-primary fc-btn-sm">Small</button>
+                    <button class="fc-btn fc-btn-primary">Normal</button>
+                    <button class="fc-btn fc-btn-primary fc-btn-lg">Large</button>
+                </div>
+                
+                <div class="demo-item">
+                    <h3>Button Variants</h3>
+                    <button class="fc-btn fc-btn-primary fc-btn-outline">Outline</button>
+                    <button class="fc-btn fc-btn-primary fc-btn-ghost">Ghost</button>
+                    <button class="fc-btn fc-btn-primary fc-btn-link">Link</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Forms Demo -->
+        <div class="demo-section">
+            <h2>Forms</h2>
+            <div class="demo-grid">
+                <div class="demo-item">
+                    <h3>Input Fields</h3>
+                    <div class="fc-form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="fc-input" placeholder="Enter your name">
+                    </div>
+                    <div class="fc-form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="fc-input" placeholder="Enter your email">
+                    </div>
+                    <div class="fc-form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="fc-textarea" placeholder="Enter your message"></textarea>
+                    </div>
+                </div>
+                
+                <div class="demo-item">
+                    <h3>Select & Switch</h3>
+                    <div class="fc-form-group">
+                        <label for="country">Country</label>
+                        <select id="country" class="fc-select">
+                            <option value="">Select a country</option>
+                            <option value="vn">Vietnam</option>
+                            <option value="us">United States</option>
+                            <option value="uk">United Kingdom</option>
+                        </select>
+                    </div>
+                    <div class="fc-form-group">
+                        <label class="fc-switch">
+                            <input type="checkbox">
+                            <span class="fc-switch-slider"></span>
+                            Enable notifications
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cards Demo -->
+        <div class="demo-section">
+            <h2>Cards</h2>
+            <div class="demo-grid">
+                <div class="fc-card">
+                    <div class="fc-card-header">
+                        <h3>Card Title</h3>
+                    </div>
+                    <div class="fc-card-body">
+                        <p>This is a basic card with some content. Cards are great for displaying content in a structured way.</p>
+                    </div>
+                    <div class="fc-card-footer">
+                        <button class="fc-btn fc-btn-primary">Action</button>
+                    </div>
+                </div>
+                
+                <div class="fc-card fc-card-elevated">
+                    <div class="fc-card-header">
+                        <h3>Elevated Card</h3>
+                    </div>
+                    <div class="fc-card-body">
+                        <p>This card has elevated styling with more prominent shadows.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Demo -->
+        <div class="demo-section">
+            <h2>Modal</h2>
+            <button class="fc-btn fc-btn-primary" onclick="FC.components.modal.show('demo-modal')">
+                Open Modal
+            </button>
+            
+            <div id="demo-modal" class="fc-modal">
+                <div class="fc-modal-content">
+                    <div class="fc-modal-header">
+                        <h3>Demo Modal</h3>
+                        <button class="fc-modal-close" onclick="FC.components.modal.hide('demo-modal')">&times;</button>
+                    </div>
+                    <div class="fc-modal-body">
+                        <p>This is a modal dialog. You can put any content here.</p>
+                    </div>
+                    <div class="fc-modal-footer">
+                        <button class="fc-btn fc-btn-secondary" onclick="FC.components.modal.hide('demo-modal')">Cancel</button>
+                        <button class="fc-btn fc-btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabs Demo -->
+        <div class="demo-section">
+            <h2>Tabs</h2>
+            <div data-fc-tabs class="fc-tabs">
+                <div class="fc-tabs-nav">
+                    <button data-fc-tab="tab1" class="fc-tab">Tab 1</button>
+                    <button data-fc-tab="tab2" class="fc-tab">Tab 2</button>
+                    <button data-fc-tab="tab3" class="fc-tab">Tab 3</button>
+                </div>
+                <div class="fc-tabs-content">
+                    <div data-fc-tab-content="tab1" class="fc-tab-content">
+                        <h3>Tab 1 Content</h3>
+                        <p>This is the content for tab 1.</p>
+                    </div>
+                    <div data-fc-tab-content="tab2" class="fc-tab-content">
+                        <h3>Tab 2 Content</h3>
+                        <p>This is the content for tab 2.</p>
+                    </div>
+                    <div data-fc-tab-content="tab3" class="fc-tab-content">
+                        <h3>Tab 3 Content</h3>
+                        <p>This is the content for tab 3.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toast Demo -->
+        <div class="demo-section">
+            <h2>Toast Notifications</h2>
+            <div class="demo-grid">
+                <button class="fc-btn fc-btn-success" onclick="FC.components.toast.show('Success message!', 'success')">
+                    Success Toast
+                </button>
+                <button class="fc-btn fc-btn-danger" onclick="FC.components.toast.show('Error message!', 'danger')">
+                    Error Toast
+                </button>
+                <button class="fc-btn fc-btn-warning" onclick="FC.components.toast.show('Warning message!', 'warning')">
+                    Warning Toast
+                </button>
+                <button class="fc-btn fc-btn-info" onclick="FC.components.toast.show('Info message!', 'info')">
+                    Info Toast
+                </button>
+            </div>
+        </div>
+
+        <!-- Progress Demo -->
+        <div class="demo-section">
+            <h2>Progress</h2>
+            <div class="demo-item">
+                <h3>Progress Bar</h3>
+                <div data-fc-progress="75" class="fc-progress">
+                    <div class="fc-progress-bar"></div>
+                </div>
+                <p>75% Complete</p>
+            </div>
+        </div>
+
+        <!-- Utilities Demo -->
+        <div class="demo-section">
+            <h2>Utility Classes</h2>
+            <div class="demo-grid">
+                <div class="demo-item">
+                    <h3>Spacing</h3>
+                    <div class="fc-p-4 fc-bg-primary fc-text-white">Padding 4</div>
+                    <div class="fc-m-4 fc-bg-secondary fc-text-white">Margin 4</div>
+                </div>
+                
+                <div class="demo-item">
+                    <h3>Display</h3>
+                    <div class="fc-d-flex fc-justify-between fc-align-center fc-bg-light fc-p-3">
+                        <span>Flex Item 1</span>
+                        <span>Flex Item 2</span>
+                    </div>
+                </div>
+                
+                <div class="demo-item">
+                    <h3>Colors</h3>
+                    <div class="fc-bg-primary fc-text-white fc-p-2">Primary</div>
+                    <div class="fc-bg-success fc-text-white fc-p-2">Success</div>
+                    <div class="fc-bg-danger fc-text-white fc-p-2">Danger</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Code Examples -->
+        <div class="demo-section">
+            <h2>Usage Examples</h2>
+            
+            <h3>Basic Setup</h3>
+            <div class="code-block">
+&lt;!-- Include FlexaCore CSS --&gt;
+&lt;link rel="stylesheet" href="https://cdn.flexacore.dev/flexacore.min.css"&gt;
+
+&lt;!-- Include FlexaCore JavaScript --&gt;
+&lt;script src="https://cdn.flexacore.dev/flexacore-engine.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.flexacore.dev/flexacore-framework.min.js"&gt;&lt;/script&gt;
+            </div>
+
+            <h3>Initialize Framework</h3>
+            <div class="code-block">
+// Auto-initialize (default)
+// Framework will initialize automatically
+
+// Manual initialization
+FC.init({
+    theme: 'dark',
+    debug: true,
+    components: {
+        modal: true,
+        toast: true
+    }
+});
+            </div>
+
+            <h3>Theme Management</h3>
+            <div class="code-block">
+// Apply theme
+FC.theme.apply('dark');
+
+// Toggle theme
+FC.theme.toggle();
+
+// Get current theme
+const currentTheme = FC.theme.get();
+            </div>
+
+            <h3>Component Usage</h3>
+            <div class="code-block">
+// Show modal
+FC.components.modal.show('my-modal');
+
+// Show toast
+FC.components.toast.show('Hello World!', 'success', 3000);
+
+// Show tab
+FC.components.tabs.show('.tabs-container', 'tab2');
+            </div>
+        </div>
+    </div>
+
+    <!-- FlexaCore JavaScript -->
+    <script src="../dist/flexacore-engine.min.js"></script>
+    <script src="../dist/flexacore-framework.min.js"></script>
+    
+    <script>
+        // Initialize with custom config
+        FC.init({
+            debug: true,
+            theme: 'default',
+            components: {
+                modal: true,
+                dropdown: true,
+                tooltip: true,
+                toast: true,
+                tabs: true,
+                switch: true,
+                progress: true,
+                skeleton: true,
+                stepper: true,
+                form: true
+            }
+        });
+
+        // Listen for framework ready event
+        document.addEventListener('flexacore-ready', () => {
+            console.log('FlexaCore Framework is ready!');
+            
+            // Show welcome toast
+            FC.components.toast.show('FlexaCore Framework loaded successfully!', 'success', 3000);
+        });
+
+        // Listen for theme changes
+        document.addEventListener('flexacore-theme-change', (e) => {
+            console.log('Theme changed to:', e.detail.theme);
+        });
+    </script>
+</body>
+</html> 

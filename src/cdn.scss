@@ -1,0 +1,163 @@
+/**
+ * FlexaCore CDN Version
+ * Complete CSS library for direct CDN usage
+ * Version: 1.0.2
+ */
+
+// Import all base styles
+@use 'base/variables';
+@use 'base/reset';
+@use 'base/typography' as base-typography;
+@use 'base/root';
+
+// Import all utilities
+@use 'utilities/spacing';
+@use 'utilities/display';
+@use 'utilities/flexbox';
+@use 'utilities/grid' as grid-utils;
+@use 'utilities/colors';
+@use 'utilities/typography' as typography-utils;
+@use 'utilities/borders';
+@use 'utilities/shadows';
+@use 'utilities/effects';
+@use 'utilities/animations';
+@use 'utilities/transitions';
+@use 'utilities/positions';
+@use 'utilities/sizing';
+@use 'utilities/overflow';
+@use 'utilities/cursor';
+@use 'utilities/pointer-events';
+@use 'utilities/user-select';
+@use 'utilities/visibility';
+@use 'utilities/z-index';
+@use 'utilities/opacity';
+@use 'utilities/responsive';
+
+// Import all components
+@use 'components/button';
+@use 'components/input';
+@use 'components/textarea';
+@use 'components/select';
+@use 'components/card';
+@use 'components/modal';
+@use 'components/tooltip';
+@use 'components/switch';
+@use 'components/tabs';
+@use 'components/dropdown';
+@use 'components/toast';
+@use 'components/progress';
+@use 'components/skeleton';
+@use 'components/stepper';
+@use 'components/badge';
+@use 'components/avatar';
+@use 'components/alert';
+@use 'components/breadcrumb';
+@use 'components/pagination';
+@use 'components/table';
+@use 'components/form';
+
+// Import all layout
+@use 'layout/container';
+@use 'layout/grid' as grid-layout;
+@use 'layout/columns';
+@use 'layout/masonry';
+
+// Import all themes
+@use 'themes/default';
+@use 'themes/dark';
+@use 'themes/rtl';
+
+// Import print styles
+@use 'base/print';
+
+// CDN-specific styles
+.fc-cdn-loaded {
+  // Indicate that FlexaCore CDN is loaded
+  &::before {
+    content: 'FlexaCore CDN v1.0.2 loaded';
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    z-index: 9999;
+    opacity: 0.7;
+    pointer-events: none;
+  }
+}
+
+// Auto-apply theme classes
+body.theme-dark {
+  @extend .theme-dark;
+}
+
+body.theme-rtl {
+  @extend .theme-rtl;
+}
+
+// Component state classes for JavaScript
+.fc-modal-active {
+  display: flex !important;
+}
+
+.fc-dropdown-active {
+  display: block !important;
+}
+
+.fc-tooltip-active {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.fc-toast-active {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+}
+
+.fc-tab-active {
+  background-color: var(--fc-primary-color) !important;
+  color: white !important;
+}
+
+.fc-tab-content-active {
+  display: block !important;
+}
+
+.fc-switch-active {
+  background-color: var(--fc-primary-color) !important;
+}
+
+.fc-step-active {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+// Toast container positioning
+.fc-toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  pointer-events: none;
+}
+
+.fc-toast {
+  pointer-events: auto;
+  margin-bottom: 10px;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+// Tooltip positioning
+.fc-tooltip {
+  position: absolute;
+  z-index: 1000;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+} 
