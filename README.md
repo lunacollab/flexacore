@@ -1,54 +1,211 @@
-# FlexaCore 🚀
+# FlexaCore - Universal UI Framework
 
-**The most modern CSS/UI library** - Combining the power of Tailwind CSS with the beauty of ShadCN UI.
-
-[![npm version](https://badge.fury.io/js/flexacore.svg)](https://badge.fury.io/js/flexacore)
-[![npm downloads](https://img.shields.io/npm/dm/flexacore.svg)](https://www.npmjs.com/package/flexacore)
-[![CDN](https://img.shields.io/badge/CDN-jsDelivr-blue.svg)](https://cdn.jsdelivr.net/npm/flexacore)
-[![CDN](https://img.shields.io/badge/CDN-unpkg-orange.svg)](https://unpkg.com/flexacore)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/lunacollab/flexacore)
-
-## ✨ Key Features
-
-- 🎨 **200+ Utility Classes** - Powerful like Tailwind CSS
-- 🧩 **20+ Components** - Beautiful and ready to use
-- 🌙 **Dark Mode** - Automatic and manual toggle
-- 🌍 **RTL Support** - Multi-language support
-- 📱 **Responsive** - Mobile-first design
-- ♿ **Accessibility** - WCAG 2.1 compliant
-- 🖨️ **Print Styles** - Optimized for printing
-- ⚡ **Zero Config** - Plug-and-play
-- 🎭 **Theming** - Easy customization with CSS Variables
+Universal UI Framework for CDN, React, Angular, Vue, Svelte with complete TypeScript support.
 
 ## 🚀 Installation
 
 ### NPM
 ```bash
-npm install flexacore
+npm install flexacore-ui-dev
 ```
 
-### Yarn
-```bash
-yarn add flexacore
-```
-
-### CDN
+### CDN (Vanilla JS)
 ```html
-<!-- jsDelivr (Recommended) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flexacore@latest/dist/flexacore.min.css">
+<!-- CSS -->
+<link rel="stylesheet" href="https://unpkg.com/flexacore-ui-dev@latest/dist/flexacore.min.css">
 
-<!-- unpkg -->
-<link rel="stylesheet" href="https://unpkg.com/flexacore@latest/dist/flexacore.min.css">
-
-<!-- Specific version -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flexacore@1.0.0/dist/flexacore.min.css">
+<!-- JavaScript -->
+<script src="https://unpkg.com/flexacore-ui-dev@latest/dist/flexacore-framework.min.js"></script>
+<script>
+  // Initialize FlexaCore
+  FlexaCore.init();
+  
+  // Switch theme
+  FlexaCore.themeManager.setTheme('dark');
+</script>
 ```
 
-### Download
-Download directly from [Releases](https://github.com/lunacollab/flexacore/releases)
+## 📦 Usage
 
-## 📖 Usage
+### React + TypeScript
+```tsx
+import { FCButton, FCModal, FCProvider } from 'flexacore-ui-dev/react';
+
+function App() {
+  return (
+    <FCProvider>
+      <FCButton variant="primary" onClick={() => console.log('clicked')}>
+        Click me
+      </FCButton>
+      <FCModal open={true} onClose={() => {}}>
+        <h2>Modal Content</h2>
+      </FCModal>
+    </FCProvider>
+  );
+}
+```
+
+### Angular
+```typescript
+import { FlexaCoreModule } from 'flexacore-ui-dev/angular';
+
+@NgModule({
+  imports: [FlexaCoreModule.forRoot()],
+  // ...
+})
+export class AppModule { }
+```
+
+```html
+<fc-button variant="primary" (onClick)="handleClick()">
+  Click me
+</fc-button>
+
+<fc-modal [open]="modalOpen" (close)="closeModal()">
+  <h2>Modal Content</h2>
+</fc-modal>
+```
+
+### Vue 3 + TypeScript
+```vue
+<template>
+  <FcButton variant="primary" @click="handleClick">
+    Click me
+  </FcButton>
+  
+  <FcModal :open="modalOpen" @close="closeModal">
+    <h2>Modal Content</h2>
+  </FcModal>
+</template>
+
+<script setup lang="ts">
+import { FcButton, FcModal } from 'flexacore-ui-dev/vue';
+
+const modalOpen = ref(false);
+const handleClick = () => console.log('clicked');
+const closeModal = () => modalOpen.value = false;
+</script>
+```
+
+### Svelte
+```svelte
+<script>
+  import { FCButton, FCModal } from 'flexacore-ui-dev/svelte';
+  
+  let modalOpen = false;
+  
+  function handleClick() {
+    console.log('clicked');
+  }
+  
+  function closeModal() {
+    modalOpen = false;
+  }
+</script>
+
+<FCButton variant="primary" on:click={handleClick}>
+  Click me
+</FCButton>
+
+<FCModal open={modalOpen} on:close={closeModal}>
+  <h2>Modal Content</h2>
+</FCModal>
+```
+
+## 🎨 Components
+
+### Available Components
+- **FCButton** - Button with variants, sizes, states
+- **FCModal** - Modal dialog with backdrop, animations
+- **FCToast** - Toast notifications with auto-close
+- **FCTabs** - Tab navigation with content switching
+- **FCSwitch** - Toggle switch component
+- **FCProgress** - Progress bar with variants
+- **FCSkeleton** - Loading skeleton with animations
+- **FCStepper** - Multi-step wizard
+- **FCForm** - Form wrapper with layouts
+- **FCInput** - Input field with validation
+- **FCTextarea** - Textarea with resizing
+- **FCSelect** - Select dropdown with options
+- **FCBadge** - Badge with variants, sizes
+- **FCAlert** - Alert messages with dismissible
+- **FCTooltip** - Tooltip with positioning
+- **FCDropdown** - Dropdown menu
+- **FCCard** - Card container with header/footer
+
+### Standardized Props
+All components have standardized props:
+- `variant`: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark'
+- `size`: 'sm' | 'md' | 'lg'
+- `disabled`: boolean
+- Event handlers: `onClick`, `onChange`, `onClose`, etc.
+
+## 🎯 Build & Development
+
+### Build All
+```bash
+npm run build
+```
+
+### Build Individual Parts
+```bash
+# CDN only
+npm run build:cdn
+
+# Framework components
+npm run build:framework
+
+# Universal framework (React, Angular, Vue, Svelte)
+npm run build:universal
+
+# Themes
+npm run build:themes
+```
+
+### Development
+```bash
+# Watch SCSS changes
+npm run watch
+
+# Demo server
+npm run demo
+
+# CDN test server
+npm run cdn:test
+```
+
+## 📁 Project Structure
+
+```
+src/
+├── core/           # Core engine, theme-manager, component-manager
+├── react/          # React components + hooks + provider
+├── angular/        # Angular components + module
+├── vue/            # Vue components
+├── svelte/         # Svelte components
+├── types/          # TypeScript definitions
+├── components/     # SCSS component styles
+├── utilities/      # Utility classes
+├── themes/         # Theme variations
+└── base/           # Base styles, reset, variables
+```
+
+## 🌟 Features
+
+- ✅ **Universal**: Support for CDN, React, Angular, Vue, Svelte
+- ✅ **TypeScript**: Full type support for all frameworks
+- ✅ **Theming**: Dark mode, light mode, high contrast
+- ✅ **Responsive**: Mobile-first design
+- ✅ **Accessible**: WCAG 2.1 compliant
+- ✅ **Customizable**: Easy to customize themes, components
+- ✅ **Modern**: ES2018+, modern CSS features
+- ✅ **Lightweight**: Optimized bundle sizes
+
+## 📄 License
+
+MIT License - see [LICENSE](LICENSE) for details.
+
+## 🎨 CSS Framework Usage
 
 ### Basic Setup
 ```html
@@ -72,21 +229,21 @@ Download directly from [Releases](https://github.com/lunacollab/flexacore/releas
 ### Import in JavaScript/TypeScript
 ```javascript
 // ES6 Modules
-import 'flexacore/dist/flexacore.css';
+import 'flexacore-ui-dev/dist/flexacore.css';
 
 // CommonJS
-require('flexacore/dist/flexacore.css');
+require('flexacore-ui-dev/dist/flexacore.css');
 ```
 
 ### SCSS Import
 ```scss
 // Import everything
-@use 'flexacore';
+@use 'flexacore-ui-dev';
 
 // Import specific parts
-@use 'flexacore/utilities';
-@use 'flexacore/components';
-@use 'flexacore/themes';
+@use 'flexacore-ui-dev/utilities';
+@use 'flexacore-ui-dev/components';
+@use 'flexacore-ui-dev/themes';
 ```
 
 ### Dark Mode
@@ -386,7 +543,7 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 - 📧 Email: support@flexacore.dev
 - 🐛 Issues: [GitHub Issues](https://github.com/flexacore/flexacore/issues)
-- 📖 Docs: [Documentation](https://docs.flexacore.dev) (Have sooner ....)
+- 📖 Docs: [Documentation](https://docs.flexacore.dev) (Coming soon)
 
 ---
 

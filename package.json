@@ -1,17 +1,44 @@
 {
-  "name": "flexacore-ui",
-  "version": "1.0.2",
-  "description": "Advanced CSS/UI library combining utility-first CSS, prebuilt components, theming, and modern design system",
+  "name": "flexacore-ui-dev",
+  "version": "1.0.6",
+  "description": "Universal UI Framework for CDN, React, Angular, Vue, Svelte with TypeScript support",
   "main": "dist/flexacore.css",
   "style": "dist/flexacore.css",
   "unpkg": "dist/flexacore.min.css",
   "jsdelivr": "dist/flexacore.min.css",
+  "types": "dist/types/flexacore.d.ts",
   "exports": {
     ".": {
       "import": "./dist/flexacore.css",
       "require": "./dist/flexacore.css",
       "style": "./dist/flexacore.css"
     },
+    "./react": {
+      "import": "./dist/react/react/index.js",
+      "require": "./dist/react/react/index.js",
+      "types": "./dist/react/react/index.d.ts"
+    },
+    "./angular": {
+      "import": "./dist/angular/angular/index.js",
+      "require": "./dist/angular/angular/index.js",
+      "types": "./dist/angular/angular/index.d.ts"
+    },
+    "./vue": {
+      "import": "./dist/vue/vue/index.js",
+      "require": "./dist/vue/vue/index.js",
+      "types": "./dist/vue/vue/index.d.ts"
+    },
+    "./svelte": {
+      "import": "./dist/svelte/svelte/index.js",
+      "require": "./dist/svelte/svelte/index.js",
+      "types": "./dist/svelte/svelte/index.d.ts"
+    },
+    "./core": {
+      "import": "./dist/core/core/index.js",
+      "require": "./dist/core/core/index.js",
+      "types": "./dist/core/core/index.d.ts"
+    },
+    "./types": "./dist/types/flexacore.d.ts",
     "./dist/flexacore.css": "./dist/flexacore.css",
     "./dist/flexacore.min.css": "./dist/flexacore.min.css",
     "./themes/*": "./dist/themes/*",
@@ -27,7 +54,7 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "npm run build:cdn && npm run build:framework && npm run build:themes",
+    "build": "npm run build:cdn && npm run build:framework && npm run build:universal && npm run build:themes",
     "build:cdn": "npm run build:cdn:css && npm run build:cdn:js",
     "build:cdn:css": "sass src/cdn.scss dist/flexacore.css --style=expanded && sass src/cdn.scss dist/flexacore.min.css --style=compressed",
     "build:cdn:js": "npm run build:engine && npm run build:framework:js && npm run build:plugins",
@@ -38,12 +65,19 @@
     "build:component-manager": "terser src/js/plugins/component-manager.js -o dist/plugins/component-manager.min.js --compress --mangle",
     "build:framework": "npm run build:framework:css && npm run build:framework:js",
     "build:framework:css": "sass src/main.scss dist/framework/flexacore.css --style=expanded && sass src/main.scss dist/framework/flexacore.min.css --style=compressed",
+    "build:universal": "npm run build:core && npm run build:react && npm run build:angular && npm run build:vue && npm run build:svelte && npm run build:types",
+    "build:core": "tsc --project tsconfig.universal.json --outDir dist/core",
+    "build:react": "tsc --project tsconfig.universal.json --outDir dist/react",
+    "build:angular": "tsc --project tsconfig.universal.json --outDir dist/angular",
+    "build:vue": "tsc --project tsconfig.universal.json --outDir dist/vue",
+    "build:svelte": "tsc --project tsconfig.universal.json --outDir dist/svelte",
+    "build:types": "tsc --project tsconfig.universal.json --outDir dist/types",
     "build:themes": "npm run build:light && npm run build:dark && npm run build:high-contrast",
     "build:light": "sass src/themes/_default.scss dist/themes/flexacore-light.min.css --style=compressed",
     "build:dark": "sass src/themes/_dark.scss dist/themes/flexacore-dark.min.css --style=compressed",
     "build:high-contrast": "sass src/themes/_high-contrast.scss dist/themes/flexacore-high-contrast.min.css --style=compressed",
-    "build:components": "sass src/components/ dist/components/flexacore-components.min.css --style=compressed",
-    "build:utilities": "sass src/utilities/ dist/utilities/flexacore-utilities.min.css --style=compressed",
+    "build:components": "sass src/components/:dist/components/ --style=compressed",
+    "build:utilities": "sass src/utilities/:dist/utilities/ --style=compressed",
     "build:all": "npm run clean && npm run build && npm run build:components && npm run build:utilities",
     "watch": "sass src/cdn.scss dist/flexacore.css --watch",
     "clean": "rimraf dist",
@@ -62,6 +96,12 @@
     "css",
     "ui",
     "framework",
+    "universal",
+    "react",
+    "angular",
+    "vue",
+    "svelte",
+    "typescript",
     "utility-first",
     "components",
     "design-system",
@@ -95,17 +135,29 @@
     "url": "https://github.com/lunacollab/flexacore/issues"
   },
   "devDependencies": {
-    "sass": "^1.69.0",
-    "vite": "^5.0.0",
+    "@angular/common": "^20.0.5",
+    "@angular/core": "^20.0.5",
+    "@angular/forms": "^20.0.5",
+    "@types/node": "^20.19.2",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vue/runtime-core": "^3.5.17",
+    "autoprefixer": "^10.4.0",
+    "cssnano": "^6.0.0",
+    "http-server": "^14.1.1",
+    "postcss": "^8.4.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "rimraf": "^5.0.0",
+    "sass": "^1.69.0",
     "stylelint": "^15.0.0",
     "stylelint-config-standard-scss": "^11.0.0",
     "stylelint-scss": "^5.0.0",
-    "autoprefixer": "^10.4.0",
-    "postcss": "^8.4.0",
-    "cssnano": "^6.0.0",
+    "svelte": "^5.34.9",
     "terser": "^5.24.0",
-    "http-server": "^14.1.1"
+    "typescript": "^5.8.3",
+    "vite": "^5.0.0",
+    "vue": "^3.5.17"
   },
   "engines": {
     "node": ">=16.0.0",

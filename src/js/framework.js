@@ -88,13 +88,18 @@
 
         // Load plugin by name
         loadPlugin(name) {
-            const script = document.createElement('script');
-            script.src = `https://cdn.flexacore.dev/plugins/${name}.js`;
+            let script = document.createElement('script');
+            // Kiểm tra nếu đang chạy local thì load từ dist, còn lại thì load từ CDN
+            if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                script.src = `../dist/plugins/${name}.min.js`;
+            } else {
+                script.src = `https://cdn.flexacore.dev/plugins/${name}.min.js`;
+            }
             script.onload = () => {
-                this.log(`Plugin "${name}" loaded`);
+                this.log(`Plugin \"${name}\" loaded`);
             };
             script.onerror = () => {
-                this.error(`Failed to load plugin "${name}"`);
+                this.error(`Failed to load plugin \"${name}\"`);
             };
             document.head.appendChild(script);
         }

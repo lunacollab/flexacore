@@ -238,13 +238,13 @@
             // Theme change listener
             window.addEventListener('flexacore-theme-change', (e) => {
                 this.state.set('theme', e.detail.theme);
-                this.emit('theme-change', e.detail);
+                // Don't emit again to avoid infinite loop
             });
             
             // RTL change listener
             window.addEventListener('flexacore-rtl-change', (e) => {
                 this.state.set('rtl', e.detail.rtl);
-                this.emit('rtl-change', e.detail);
+                // Don't emit again to avoid infinite loop
             });
         }
 

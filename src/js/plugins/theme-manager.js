@@ -340,34 +340,55 @@
             const root = document.documentElement;
             
             // Update color properties
-            Object.entries(theme.colors).forEach(([name, value]) => {
-                root.style.setProperty(`--fc-${name}`, value);
-            });
+            if (theme.colors) {
+                Object.entries(theme.colors).forEach(([name, value]) => {
+                    root.style.setProperty(`--fc-${name}`, value);
+                });
+            }
             
             // Update typography properties
-            Object.entries(theme.typography).forEach(([name, value]) => {
-                if (name === 'fontFamily') {
-                    const fontFamily = this.engine.getConfig('typography.fontFamily')[value];
-                    root.style.setProperty(`--fc-font-family`, fontFamily.join(', '));
-                } else {
-                    root.style.setProperty(`--fc-${name}`, value);
-                }
-            });
+            if (theme.typography) {
+                Object.entries(theme.typography).forEach(([name, value]) => {
+                    if (name === 'fontFamily') {
+                        try {
+                            const fontFamilyConfig = this.engine.getConfig('typography.fontFamily');
+                            if (fontFamilyConfig && fontFamilyConfig[value]) {
+                                const fontFamily = fontFamilyConfig[value];
+                                root.style.setProperty(`--fc-font-family`, fontFamily.join(', '));
+                            } else {
+                                // Fallback to default sans font
+                                root.style.setProperty(`--fc-font-family`, '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif');
+                            }
+                        } catch (error) {
+                            // Fallback to default sans font
+                            root.style.setProperty(`--fc-font-family`, '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif');
+                        }
+                    } else {
+                        root.style.setProperty(`--fc-${name}`, value);
+                    }
+                });
+            }
             
             // Update spacing properties
-            Object.entries(theme.spacing).forEach(([name, value]) => {
-                root.style.setProperty(`--fc-spacing-${name}`, value);
-            });
+            if (theme.spacing) {
+                Object.entries(theme.spacing).forEach(([name, value]) => {
+                    root.style.setProperty(`--fc-spacing-${name}`, value);
+                });
+            }
             
             // Update border radius properties
-            Object.entries(theme.borderRadius).forEach(([name, value]) => {
-                root.style.setProperty(`--fc-radius-${name}`, value);
-            });
+            if (theme.borderRadius) {
+                Object.entries(theme.borderRadius).forEach(([name, value]) => {
+                    root.style.setProperty(`--fc-radius-${name}`, value);
+                });
+            }
             
             // Update shadow properties
-            Object.entries(theme.shadows).forEach(([name, value]) => {
-                root.style.setProperty(`--fc-shadow-${name}`, value);
-            });
+            if (theme.shadows) {
+                Object.entries(theme.shadows).forEach(([name, value]) => {
+                    root.style.setProperty(`--fc-shadow-${name}`, value);
+                });
+            }
         }
 
         updateBodyClasses(themeName) {

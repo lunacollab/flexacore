@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "declaration": true,
+    "outDir": "./dist",
+    "module": "commonjs",
+    "target": "es2018",
+    "jsx": "react"
+  },
+  "include": ["src/**/*", "src/types/global.d.ts"],
+  "exclude": ["node_modules", "dist", "**/*.scss", "**/*.css"]
+} 
